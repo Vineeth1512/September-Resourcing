@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>360 Resourcing</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/colors/blue.css">
+
+</head>
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header Container
+================================================== -->
+		<header id="header-container" class="fullwidth">
+
+			<!-- Header -->
+			<div id="header">
+				<div class="container">
+
+					<!-- Left Side Content -->
+					<div class="left-side">
+
+						<!-- Logo -->
+						<div id="logo">
+							<a href="../../index.html"><img
+								src="../../images/logo360.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<!-- Page Content
+================================================== -->
+		<div class="container">
+			<div id="titlebar" class="gradient">
+				<div class="row">
+					<div class="col-xl-5 offset-xl-3">
+
+
+						<div class="login-register-page">
+							<!-- Welcome Text -->
+							<div class="welcome-text">
+								<h3>We're glad to see you again!</h3>
+								<span>Don't have an account? <a
+									th:href="@{../interviewer}">signUp!</a></span>
+							</div>
+							<div>
+								<h4>
+									<span style="color: red" th:text="${errorMessage}"></span>
+								</h4>
+							</div>
+
+							<!-- Form -->
+							<form method="post" id="login-form"
+								th:action="@{../../interviewer/validateInterviewer}"
+								th:object="${InterviewerDetails}">
+								<div class="input-with-icon-left">
+									<i class="icon-material-baseline-mail-outline"></i> <input
+										type="email" class="input-text with-border"
+										name="interviewerMail" th:value="${interviewerMail}"
+										id="interviewerMail" placeholder="Email Address" required />
+								</div>
+
+								<div class="input-with-icon-left">
+									<i class="icon-material-outline-lock"></i> <input
+										type="password" class="input-text with-border" name="password"
+										th:value="${Password}" id="password" placeholder="Password"
+										required />
+								</div>
+								<a th:href="@{../../interviewer/forgotPassword}"
+									class="forgot-password">Forgot Password?</a>
+							</form>
+
+							<!-- Button -->
+							<button
+								class="button full-width button-sliding-icon ripple-effect margin-top-10"
+								type="submit" form="login-form">
+								Log In <i class="icon-material-outline-arrow-right-alt"></i>
+							</button>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Spacer -->
+		<div class="margin-top-70"></div>
+		<!-- Spacer / End-->
+		<div id="footer">
+
+			<!-- Footer Top Section -->
+			<div class="footer-top-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+
+							<!-- Footer Rows Container -->
+							<div class="footer-rows-container">
+
+								<!-- Left Side -->
+								<div class="footer-rows-left">
+									<div class="footer-row">
+										<div class="footer-row-inner footer-logo">
+											<img src="../../images/logo360.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Right Side -->
+
+				<!-- Footer Copyrights -->
+				<div class="footer-bottom-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								© 2022 <strong>360 Resourcing</strong>. All Rights Reserved.
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer Copyrights / End -->
+
+			</div>
+			<!-- Footer / End -->
+
+		</div>
+	</div>
+	<!-- Wrapper / End -->
+
+	<!-- Scripts
+================================================== -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-migrate-3.3.2.min.js"></script>
+	<script src="js/mmenu.min.js"></script>
+	<script src="js/tippy.all.min.js"></script>
+	<script src="js/simplebar.min.js"></script>
+	<script src="js/bootstrap-slider.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/snackbar.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/counterup.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/strongPassword.js"></script>
+
+	<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+	<script>
+// Snackbar for user status switcher
+$('#snackbar-user-status label').click(function() { 
+	Snackbar.show({
+		text: 'Your status has been changed!',
+		pos: 'bottom-center',
+		showAction: false,
+		actionText: "Dismiss",
+		duration: 3000,
+		textColor: '#fff',
+		backgroundColor: '#383838'
+	}); 
+}); 
+</script>
+</body>
+</html>
