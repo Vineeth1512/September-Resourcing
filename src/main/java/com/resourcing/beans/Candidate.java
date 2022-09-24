@@ -108,6 +108,9 @@ public class Candidate {
 	@Lob
 	@Column(name = "image")
 	private String image;
+	
+	@Column (name = "qrCode")
+	private String qrCode;
 
 	@Column(name = "about")
 	private String about;
@@ -115,6 +118,8 @@ public class Candidate {
 	private String captcha;
 
 	private String userCaptcha;
+	
+	
 
 
 }

@@ -226,15 +226,122 @@
 	================================================== -->
 			<div class="dashboard-content-container" data-simplebar>
 				<div class="dashboard-content-inner">
-					<div>
-						<h2 th:text="${message}"
-							style="text-align: left; color: blue; padding-top: 40px"></h2>
-					</div>
+				
 					<!-- Dashboard Headline -->
 					<div class="container">
 						<div class="row">
+						
 
-							<div class="col-xl-6 col-md-6">
+							<!-- Dashboard Box -->
+							<div class="col-xl-12">
+								<div id="print">
+									<div class="dashboard-box margin-top-0">
+
+										<!-- Headline -->
+										<div class="headline">
+											<h3>
+												<i class="icon-material-outline-business-center"></i><span
+													style="color: blue" th:text="${TableName}"></span> <b>
+
+													<span style="color: green" th:text="${message}"></span> <span
+													style="color: red" th:text="${red}"></span>
+												</b>
+
+											</h3>
+										</div>
+
+										<!--=========== for search bar -->
+										<input id="searchbar" onkeyup="search_data()" type="text"
+											name="search" placeholder="Search here">
+										<!--============ for search bar -->
+
+										<div class="content" th:each="obj:${listOfEmployees}">
+											<ul class="dashboard-box-list" id="list">
+												<li class="data">
+													<!-- Job Listing -->
+													<div class="job-listing">
+
+														<!-- Job Listing Details -->
+														<div class="job-listing-details">
+
+															<!-- Details -->
+															<div class="job-listing-description">
+
+																<i class="icon-line-awesome-institution"></i> Employee
+																Name :
+																<h3 th:text="${obj.employeeName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+																<i class="icon-line-awesome-institution"></i> Employee
+																Role :
+																<h3 th:text="${obj.employeeRole}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+																<i class="icon-line-awesome-institution"></i> Company
+																Name :
+																<h3 th:text="${obj.branch.company.companyName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3> 
+																	
+																	<i class="icon-line-awesome-institution"></i> Branch
+																Name :
+																<h3 th:text="${obj.branch.branchName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+
+																<i class="icon-material-baseline-mail-outline"></i>
+																Email : <span class="dashboard-status-button green"
+																	th:text="${obj.emailId}" style="color: rgb();"></span>
+
+
+																<!-- Job Listing Footer -->
+																<div class="job-listing-footer">
+																	<ul>
+																		<li><i class="icon-feather-phone"></i> Mobile
+																			Number : <span class="dashboard-status-button green"
+																			th:text="${obj.mobileNo}" style="color: rgb();"></span></li>
+
+
+
+																		<li><i class="icon-material-outline-date-range"></i>
+																			IsActive : <span class="dashboard-status-button green"
+																			th:text="${obj.isActive}" style="color: rgb();"></span></li>
+
+
+																	</ul>
+																	
+																</div>
+															</div>
+														</div>
+													</div> <!--  Buttons -->
+
+
+												</li>
+
+
+											</ul>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="margin-top-70"></div>
+								<!-- Spacer / End-->
+
+								<button class="button ripple-effect"
+									onclick="printContent('print')">Download</button>
+
+
+							</div>
+
+						</div>
+						
+						
+
+							<!-- <div class="col-xl-6 col-md-6">
 
 								<div class="section-headline margin-bottom-30"></div>
 								<table class="basic-table" id="example">
@@ -263,7 +370,7 @@
 										</tr>
 									</tbody>
 								</table>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<!-- Row / End -->
@@ -310,6 +417,9 @@
 	<script src="../js/custom.js"></script>
 	<script src="../js/strongPassword.js"></script>
 	<script src="../js/isActiveButton.js"></script>
+	
+			<script src="../../js/print.js"></script>
+			<script src="../../js/search_bar.js"></script>
 
 
 	<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->

@@ -1,5 +1,5 @@
 /* 
- * Author : Srivani Tudi */
+ * @Author : Srivani Tudi */
 
 package com.resourcing.controller;
 
@@ -23,6 +23,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +33,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.resourcing.beans.Candidate;
 import com.resourcing.beans.CandidateJdAssociation;
@@ -128,7 +130,7 @@ public class EmployeeController {
 	// View loginPage with employee Mail and password
 	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
 	public ModelAndView employeeloginPage(Employee employeeObj) {
-		LOGGER.debug("entered into employee Controller:::: login method");
+		System.out.println("entered into employee Controller:::: login method");
 		ModelAndView mav = new ModelAndView("employee_login_page");
 		mav.addObject("newUserDetails", employeeObj);
 		return mav;
@@ -138,18 +140,13 @@ public class EmployeeController {
 	@PostMapping("/employeeValidation")
 	public ModelAndView validatemethod(@ModelAttribute("newUserDetails") Employee employeeObj,
 			HttpServletRequest request, Model model) {
-		LOGGER.debug("emp ped::" + employeeObj.getPassword());
 		String strEncPassword = Utilities.getEncryptSecurePassword(employeeObj.getPassword(), "RESOURCING");
-		LOGGER.debug("after encryt::" + strEncPassword);
 		Employee employeeExist = employeeService.findByUserNameIgnoreCaseAndPassword(employeeObj.getEmailId(),
 				strEncPassword);
 		if (employeeExist != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("employeeObj", employeeExist);
-			LOGGER.debug("session is set::" + session.getAttribute("employeeObj"));
-			LOGGER.debug("session object::" + session.getAttribute("employeeObj"));
-			LOGGER.debug("employee controller validation method employee mail id  is:" + employeeExist.getEmailId());
-			LOGGER.debug("employee dashboard page is displayed");
+			System.out.println("employee dashboard page is displayed");
 			ModelAndView mav = new ModelAndView("employee_dashboard");
 			mav.addObject("clientsCount",
 					employeeClientAssociationService.findClientsByEmployeeId(employeeExist).size());
@@ -162,7 +159,7 @@ public class EmployeeController {
 							&& scheduleObject.getStatus().equals("SELECTED"))
 					.toList();
 			mav.addObject("selectedCandidatedCount", selctedCandidatesList.size());
-			LOGGER.debug("selected candidateList::count::" + selctedCandidatesList.size());
+			System.out.println("selected candidateList::count::" + selctedCandidatesList.size());
 			List<Schedule> rejctedCandidatesList = objSchedule.stream()
 					.filter(scheduleObject -> scheduleObject.getStatus() != null
 							&& scheduleObject.getStatus().equals("REJECTED"))
@@ -175,27 +172,26 @@ public class EmployeeController {
 					.getAllEmployeeClientAssociations();
 			List<EmployeeClientAssociation> eca2 = ecalist1.stream().filter(eca3 -> eca3.getEmployee() == employeeExist)
 					.collect(Collectors.toList());
-			LOGGER.debug("client Count with id 18::" + eca2.size());
-			LOGGER.debug("session name::" + employeeExist.getEmailId());
-			LOGGER.debug("my candidates count" + myCandidatesList.size());
-			mav.addObject("sessionEmployee", employeeExist);
-			List<JobDescription> allJds = jobDescriptionService.getAllJobDescriptions();
+			System.out.println("client Count with id 18::" + eca2.size());
+			System.out.println("my candidates count" + myCandidatesList.size());
 			List<Schedule> allSchedules = scheduleService.getAllSchedulesById(employeeExist);
 			List<Schedule> todaySchedules = allSchedules.stream()
 					.filter(scheduleObj -> scheduleObj.getDate().equals(LocalDate.now()))
 					.toList();
-			LOGGER.debug("todayScheduleCount::" + todaySchedules.size());
+			System.out.println("todayScheduleCount::" + todaySchedules.size());
 			mav.addObject("todaySchedulesCount", todaySchedules.size());
 			List<Schedule> upComingSchedules = allSchedules.stream()
 					.filter(scheduleobj -> scheduleobj.getStatus()==null && !(scheduleobj.getDate().equals(LocalDate.now())))
 					.toList();
 			mav.addObject("upComingschedules", upComingSchedules);
 			mav.addObject("upComingSchedulesCount", upComingSchedules.size());
-			LOGGER.debug("upComingschedulesCount:::"+upComingSchedules.size());
+			System.out.println("upComingschedulesCount:::"+upComingSchedules.size());
+			System.out.println("session status:"+session.getAttribute("employeeObj")!=null);
+			
 			return mav;
 
 		} else {
-			LOGGER.debug("else block of validation:::: Use valid details");
+			System.out.println("else block of validation:::: Use valid details");
 			ModelAndView mav2 = new ModelAndView("employee_login_page");
 			mav2.addObject("newUserDetails", new Employee());
 			mav2.addObject("errorMessage", "invalid Credentials!");
@@ -204,43 +200,42 @@ public class EmployeeController {
 	}
 
 	// access employee dashBoard from any where throughout the session is live
-    @RequestMapping(value = "/employeeDashboard", method = RequestMethod.GET)
-    public ModelAndView employeeDashboard(Model model, HttpSession session) {
-        Employee sessionEmployee = (Employee) session.getAttribute("employeeObj");
-        LOGGER.debug("chekc:::"+sessionEmployee.getEmailId());
-        LOGGER.debug("employeeId:"+sessionEmployee.getEmployeeId());
-        ModelAndView mav = new ModelAndView("employee_dashboard");
-        mav.addObject("jobsCount", jobDescriptionService.getAllJobDescriptions().size());
-        List<Schedule> objSchedule = scheduleService.finalFeedbackList(sessionEmployee);
-        LOGGER.debug("before::");
-        List<Schedule> selctedCandidatesList = objSchedule.stream().filter(scheduleObject -> scheduleObject.getStatus() != null && scheduleObject.getStatus().equals("SELECTED")).toList();
-        LOGGER.debug("one step:"+selctedCandidatesList.size());
-        mav.addObject("selectedCandidatedCount", selctedCandidatesList.size());
-        LOGGER.debug("selected candidateList::count::" + selctedCandidatesList.size());
-        List<Schedule> rejectedCandidatesList = scheduleService.rejectedCandidatesListByEmployee(sessionEmployee);
-        LOGGER.debug("rejectedCandidatesList::count::" + rejectedCandidatesList.size());
-       mav.addObject("rejectedCandidatedCount", rejectedCandidatesList.size());
-        List<Candidate> myCandidatesList = candidateService.getCandidateListOfRecruiter(sessionEmployee);
-        mav.addObject("myCandidatesCount", myCandidatesList.size());
-        List<EmployeeClientAssociation> ecalist = employeeClientAssociationService
-                .findClientsByEmployeeId(sessionEmployee);
-        mav.addObject("clientsCount", ecalist.size());
-        return mav;
-    }
+	@RequestMapping(value = "/employeeDashboard", method = RequestMethod.GET)
+	public ModelAndView employeeDashboard(Model model, HttpSession session) {
+		Employee sessionEmployee = (Employee) session.getAttribute("employeeObj");
+		ModelAndView mav = new ModelAndView("employee_dashboard");
+		mav.addObject("jobsCount", jobDescriptionService.getAllJobDescriptions().size());
+		List<Schedule> objSchedule = scheduleService.finalFeedbackList(sessionEmployee);
+		List<Schedule> selctedCandidatesList = objSchedule.stream()
+				.filter(scheduleObject -> scheduleObject.getStatus() != null
+						&& scheduleObject.getStatus().equals("SELECTED"))
+				.toList();
+		System.out.println("selected candidateList::count::" + selctedCandidatesList.size());
+		List<Schedule> rejectedCandidatesList = scheduleService.rejectedCandidatesListByEmployee(sessionEmployee);
+		System.out.println("rejectedCandidatesList::count::" + rejectedCandidatesList.size());
+
+		mav.addObject("rejectedCandidatedCount", rejectedCandidatesList.size());
+		List<Candidate> myCandidatesList = candidateService.getCandidateListOfRecruiter(sessionEmployee);
+		mav.addObject("myCandidatesCount", myCandidatesList.size());
+		List<EmployeeClientAssociation> ecalist = employeeClientAssociationService
+				.findClientsByEmployeeId(sessionEmployee);
+		mav.addObject("clientsCount", ecalist.size());
+		return mav;
+	}
 
 	// =============employee Candidate Association===================//
 //	get the list of candidates assigned to recruiter(employee)
 	@GetMapping("/candidateList/{employeeId}")
 	public String getAllCandidates(Model model, Candidate candidate,
 			@PathVariable(value = "employeeId") int employeeId) {
-		LOGGER.debug(" all Candidates assigned to this recruiter:::");
-		LOGGER.debug("candidates assigned to you");
+		System.out.println(" all Candidates assigned to this recruiter:::");
+		System.out.println("candidates assigned to you");
 		Employee employeeExist = employeeService.getEmployeeById(employeeId);
-		LOGGER.debug("employee found with name::" + employeeExist.getEmployeeName());
+		System.out.println("employee found with name::" + employeeExist.getEmployeeName());
 		List<Candidate> candidateList = candidateService.getCandidateListOfRecruiter(employeeExist);
 		List<Education> educationList = educationService.getAllEducations();
 		List<CandidateSkillAssociation> skillList = canSkillAssService.getAllCandidateSkillAssociations();
-		LOGGER.debug("candidates found with employee::" + employeeExist.getEmployeeName()
+		System.out.println("candidates found with employee::" + employeeExist.getEmployeeName()
 				+ "no of candidates found are::" + candidateList.size());
 		model.addAttribute("educationList", educationList);
 		model.addAttribute("candidateList", candidateList);
@@ -253,12 +248,12 @@ public class EmployeeController {
 	// get all Candidates List
 	@GetMapping("/candidateList")
 	public String getAllCandidates(Model model, Candidate candidate) {
-		LOGGER.debug("inside getAllCandidates this will get the all Candidates:::");
+		System.out.println("inside getAllCandidates this will get the all Candidates:::");
 		List<Candidate> candidateList = candidateService.getAllCandidates();
 		List<Education> educationList = educationService.getAllEducations();
 		List<CandidateSkillAssociation> skillList = canSkillAssService.getAllCandidateSkillAssociations();
 		model.addAttribute("csaList", skillList);
-		LOGGER.debug("skillList::::" + skillList);
+		System.out.println("skillList::::" + skillList);
 		model.addAttribute("educationList", educationList);
 		model.addAttribute("candidateList", candidateList);
 		model.addAttribute("count", candidateList.size());
@@ -271,7 +266,7 @@ public class EmployeeController {
 	@GetMapping("/candidate/dashboardSettings/{id}")
 	public String dashboardSettingsPage(Model model, @PathVariable int id) {
 		Candidate candidate = candidateService.getCandidateById(id);
-		LOGGER.debug(candidate.getCandidateId());
+		System.out.println(candidate.getCandidateId());
 		model.addAttribute("candidate", candidate);
 		return "employee_candidate_dashboard_settings";
 	}
@@ -301,7 +296,7 @@ public class EmployeeController {
 	// view email verification page on forgot password
 	@RequestMapping(value = "/employeeForgotPassword", method = RequestMethod.GET)
 	public ModelAndView employeeForgotPasswordPage(Employee newUser) {
-		LOGGER.debug("entered into employee/controller::::forgot paswword method");
+		System.out.println("entered into employee/controller::::forgot paswword method");
 		ModelAndView mav = new ModelAndView("employee_forgot_password");
 		mav.addObject("newUserDetails", newUser);
 		return mav;
@@ -310,8 +305,8 @@ public class EmployeeController {
 	// validate employee email//
 	@PostMapping(value = "/validateEmployeeEmailId")
 	public String checkMailId(Model model, Employee tempUser) {
-		LOGGER.debug("entered into employee/controller::::check EmailId existing or not");
-		LOGGER.debug("UI given mail Id:" + tempUser.getEmailId());
+		System.out.println("entered into employee/controller::::check EmailId existing or not");
+		System.out.println("UI given mail Id:" + tempUser.getEmailId());
 		Employee pUser = employeeService.findByEmailId(tempUser.getEmailId());
 		if (pUser != null) {
 			model.addAttribute("newUserDetails", tempUser);
@@ -328,19 +323,19 @@ public class EmployeeController {
 	public ModelAndView updateUserPassword(Model model, @ModelAttribute("newUserDetails") Employee tempEmployeeObj,
 			HttpSession session) {
 		Employee employeeObjExist = employeeService.findByEmailId(tempEmployeeObj.getEmailId());
-		LOGGER.debug("in update method employee:: name " + employeeObjExist.getEmployeeName());
+		System.out.println("in update method employee:: name " + employeeObjExist.getEmployeeName());
 		employeeObjExist.setUpdatedDate(LocalDateTime.now());
-		LOGGER.debug("updated password before Ency::" + tempEmployeeObj.getPassword());
+		System.out.println("updated password before Ency::" + tempEmployeeObj.getPassword());
 		String strEncPassword = Utilities.getEncryptSecurePassword(tempEmployeeObj.getPassword(), "RESOURCING");
 		tempEmployeeObj.setPassword(strEncPassword); // while saving the user put this to encrypt pwd.
 		employeeObjExist.setPassword(strEncPassword);
-		LOGGER.debug("emp password::" + tempEmployeeObj.getPassword());
+		System.out.println("emp password::" + tempEmployeeObj.getPassword());
 		employeeObjExist.setIsActive("Y");
 		employeeService.updateEmployee(employeeObjExist);
-		LOGGER.debug("db paswd::" + employeeObjExist.getPassword());
-		LOGGER.debug("password is updated sucessfully");
+		System.out.println("db paswd::" + employeeObjExist.getPassword());
+		System.out.println("password is updated sucessfully");
 		ModelAndView mav = new ModelAndView("employee_login_page");
-		LOGGER.debug("login page is displayed");
+		System.out.println("login page is displayed");
 		mav.addObject("passwordUdatedMessage", "password Updated successfully");
 		mav.addObject("newUserDetails", employeeObjExist);
 		return mav;
@@ -349,11 +344,12 @@ public class EmployeeController {
 	// employee logout and session set to null
 	@RequestMapping(value = "/employeeLogout", method = RequestMethod.GET)
 	public ModelAndView UserLogout(HttpSession session, Employee newEmployee) {
-		LOGGER.debug("entered into employee/controller::::logged out");
+		System.out.println("entered into employee/controller::::logged out");
 		ModelAndView mav = new ModelAndView("redirect:/resourcing");
-		mav.addObject("newUserDetails", newEmployee);
 		session.setAttribute("employeeObj", null);
-		LOGGER.debug("session object after logout:::" + session.getAttribute("employeeObj"));
+		System.out.println("session object after logout:::" + session.getAttribute("employeeObj"));
+		System.out.println("session status:"+session.getAttribute("employeeObj"));
+
 		return mav;
 	}
 
@@ -361,45 +357,52 @@ public class EmployeeController {
 	// settings==========================================================================//
 	// view employee dashBoard settings page
 	@RequestMapping(value = "/employeeDasboardSettings/{id}", method = RequestMethod.GET)
-	public ModelAndView employeeDasboardSettingPage(@PathVariable(value = "id") int id) {
-		LOGGER.debug("entered into emp/controller:::: dashboard setting page will display");
-		LOGGER.debug("employee Dashborad settings");
+	public ModelAndView employeeDasboardSettingPage(@PathVariable(value = "id") int id, @RequestParam(required  = false) String message)  {
+		System.out.println("entered into emp/controller:::: dashboard setting page will display");
+		System.out.println("employee Dashborad settings");
 		Employee employeeExist = employeeService.getEmployeeById(id);
-		LOGGER.debug("employeeExist Name:::" + employeeExist.getEmployeeName());
-		LOGGER.debug("employee Name is :::" + employeeExist.getEmployeeName());
+		System.out.println("employeeExist Name:::" + employeeExist.getEmployeeName());
+		System.out.println("employee Name is :::" + employeeExist.getEmployeeName());
 		ModelAndView mav = new ModelAndView("employee_dashboard_settingss");
 		mav.addObject("employeeObj", employeeExist);
-		mav.addObject("branch", employeeExist.getBranch().branchId);
+		if(!StringUtils.isEmpty(message)) {
+			mav.addObject("message",message);
+		}
 		return mav;
 	}
 
 	// update employee Details record
 	@RequestMapping(value = "/updateEmployeeDetails", method = RequestMethod.POST)
-	public ModelAndView saveEmployeeDetails(Model model,
-			@RequestParam("file") MultipartFile file, @ModelAttribute("employeeObj") Employee employee) throws IOException {
-		LOGGER.debug("employee dash board:: employeeName::" + employee.getEmployeeName());
-		LOGGER.debug("employee dash board:: employeeRole::" + employee.getEmployeeRole());
-		LOGGER.debug("employee dash board:: employeeMobile::" + employee.getMobileNo());
-		Employee employeeExist = employeeService.getEmployeeById(employee.getEmployeeId());
-		ModelAndView mav = new ModelAndView("redirect:/emp/employeeDashboard");
-		LOGGER.debug("entered into employee update method");
+	public ModelAndView saveEmployeeDetails(Model model, @ModelAttribute("employeeObj") Employee employee,RedirectAttributes redirectAttributes,
+			@RequestParam("file") MultipartFile file,HttpSession session) throws IOException {
+		System.out.println("employee dash board:: employeeName::" + employee.getEmployeeName());
+		System.out.println("employee dash board:: employeeRole::" + employee.getEmployeeRole());
+		System.out.println("employee dash board:: employeeMobile::" + employee.getMobileNo());
+		Employee employeeExist = (Employee) session.getAttribute("employeeObj");
+		ModelAndView mav = new ModelAndView("redirect:/emp/employeeDasboardSettings/" + employeeExist.getEmployeeId());
+		System.out.println("entered into employee update method");
 		mav.addObject("newUserDetails", employeeExist);
-		LOGGER.debug("branch:::" + employeeExist.getBranch());
-		LOGGER.debug("in update method employee:: name " + employeeExist.getEmployeeName());
-		employee.setUpdatedDate(LocalDateTime.now());
-		employee.setUpdatedBy(employeeExist.getEmployeeId());
-		employee.setCreatedDate(employeeExist.getCreatedDate());
-		employee.setIsActive("Y");
-		if(file.getOriginalFilename() == "") {
-			employee.setImage(employeeExist.getImage());
-		} 
-		else {
+		redirectAttributes.addFlashAttribute("message", "updated sucessfully");
+		if (file.getOriginalFilename() == "") {
+			employeeExist.setImage(employeeExist.getImage());
+		} else {
 			employee.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
+			employeeExist.setImage(employee.getImage());
 		}
-		LOGGER.debug("employeeName is::" + employee.getEmployeeName());
-		employeeService.updateEmployee(employee);
-		LOGGER.debug(" Employee fields are updated sucessfully");
-		LOGGER.debug("employee details updated sucessfully");
+//		System.out.println("branch:::" + employeeExist.getBranch().branchName);
+		System.out.println("in update method employee:: name " + employeeExist.getEmployeeName());
+		employeeExist.setUpdatedDate(LocalDateTime.now());
+		employeeExist.setUpdatedBy(employeeExist.getEmployeeId());
+		employeeExist.setCreatedDate(employeeExist.getCreatedDate());
+		employeeExist.setIsActive("Y");
+		employeeExist.setEmployeeName(employee.getEmployeeName());
+		employeeExist.setMobileNo(employee.getMobileNo());
+		employeeExist.setBarCode(employeeExist.getBarCode());
+		System.out.println("employeeImage is::" + file.getBytes());
+		System.out.println("employeeName is::" + employee.getEmployeeName());
+		employeeService.updateEmployee(employeeExist);
+		System.out.println(" Employee fields are updated sucessfully");
+		System.out.println("employee details updated sucessfully");
 		return mav;
 	}
 
@@ -410,8 +413,8 @@ public class EmployeeController {
 		Employee employee=(Employee)session.getAttribute("employeeObj");
 		List<EmployeeClientAssociation> ClientListForEmployee = employeeClientAssociationService
 				.findClientsByEmployeeId(employee);
-		LOGGER.debug("my clients::"+ClientListForEmployee.size());
-		LOGGER.debug("employee client association list::::" + ClientListForEmployee);
+		System.out.println("my clients::"+ClientListForEmployee.size());
+		System.out.println("employee client association list::::" + ClientListForEmployee);
 		model.addAttribute("clientList", ClientListForEmployee);
 		model.addAttribute("TableName", ClientListForEmployee.size()+" clients are ASSIGNED!!");
 		return "employee_associated_clientlist";
@@ -422,11 +425,11 @@ public class EmployeeController {
 //=======================Interviewers Association==========================================//
 	@GetMapping("/interviewersList")
 	public String getAllInterviewers(Model model, Candidate candidate) {
-		LOGGER.debug("inside getAllCandidates this will get the all Candidates:::");
+		System.out.println("inside getAllCandidates this will get the all Candidates:::");
 		List<InterviewPanel> interviewersList = interviewPanelService.getAllInterviewers();
 		List<SkillInterviewerAssosiation> skillList = interviewerSkillService.getAllSkillInterviewerAssociations();
 		model.addAttribute("csaList", skillList);
-		LOGGER.debug("skillList::::" + skillList);
+		System.out.println("skillList::::" + skillList);
 		model.addAttribute("allInterviewers", interviewersList);
 		model.addAttribute("count", interviewersList.size());
 		model.addAttribute("interviewersList", "List of all Interviewers");
@@ -435,7 +438,7 @@ public class EmployeeController {
 
 	@GetMapping("/interviewerAvailability/{id}")
 	public String getAllInterviewerAvailabilty(Model model, @PathVariable(value = "id") int interviewerId) {
-		LOGGER.debug(" interviewers availabilty sechedule:::");
+		System.out.println(" interviewers availabilty sechedule:::");
 		InterviewPanel interviewer = interviewPanelService.getInterviewerById(interviewerId);
 		List<InterviewerAvailability> availabilityList = inAvailabilityService.getAllInterviewerAvailabilities();
 		model.addAttribute("interviewer", interviewer);
@@ -445,7 +448,7 @@ public class EmployeeController {
 
 	@GetMapping("/feedbackList/{id}")
 	public String feedbackList(Model model, @PathVariable int id, HttpSession session) {
-		LOGGER.debug("method invoked:::::::::");
+		System.out.println("method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		model.addAttribute("scheduleList", objSchedule);
@@ -457,12 +460,12 @@ public class EmployeeController {
 
 	@GetMapping("/reScheduleList/{id}")
 	public String reScheduleList(Model model, @PathVariable int id, HttpSession session) {
-		LOGGER.debug("reScheduleList/{id}::method invoked:::::::::");
+		System.out.println("reScheduleList/{id}::method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		List<Schedule> reScheduleList = objSchedule.stream().filter(scheduleObj -> scheduleObj.getFeedback() != null
 				&& scheduleObj.getFeedback().contentEquals("NOT ATTENDED")).toList();
-		LOGGER.debug("Reschedule List Size::" + reScheduleList.size());
+		System.out.println("Reschedule List Size::" + reScheduleList.size());
 		model.addAttribute("scheduleList", reScheduleList);
 		model.addAttribute("count", reScheduleList.size());
 		model.addAttribute("sessionEmployee", employee);
@@ -474,8 +477,8 @@ public class EmployeeController {
 
 	@GetMapping("/candidate/docList/{candidateId}")
 	public String ListOfCandidateDocs(Model model, @PathVariable int candidateId) {
-		LOGGER.debug("cnadudate Id for doc list::" + candidateId);
-		LOGGER.debug("candidateId in list method:::::" + candidateId);
+		System.out.println("cnadudate Id for doc list::" + candidateId);
+		System.out.println("candidateId in list method:::::" + candidateId);
 		Candidate candidate = candidateService.getCandidateById(candidateId);
 		List<Doc> docs = docStorageService.getAllFilesById(candidateId);
 		model.addAttribute("docs", docs);
@@ -486,7 +489,7 @@ public class EmployeeController {
 	@GetMapping("/candidate/downloadFile/{fileId}")
 	public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable Integer fileId) throws Exception {
 		Doc doc = docStorageService.getFileById(fileId);
-		LOGGER.debug("download candidate documents:::");
+		System.out.println("download candidate documents:::");
 
 		return ResponseEntity.ok().contentType(MediaType.parseMediaType(doc.getDocType()))
 				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + doc.getDocName() + "\"")
@@ -498,8 +501,8 @@ public class EmployeeController {
 
 	@GetMapping("/addSkillByManager/{id}")
 	public String addingSkillsByManager(@PathVariable int id, Model model, Skill skill) {
-		LOGGER.debug("before if condition:::");
-		LOGGER.debug("if condition:::::::");
+		System.out.println("before if condition:::");
+		System.out.println("if condition:::::::");
 		model.addAttribute("skill", skill);
 		return "employee_skill_added_by_manager";
 	}
@@ -536,7 +539,7 @@ public class EmployeeController {
 		List<Skill> skillList = skillService.getAllSkills();
 		Comparator<Skill> skillByName = Comparator.comparing(Skill::getSkillName);
 		List<Skill> sortedSkills = skillList.stream().sorted(skillByName).collect(Collectors.toList());
-		LOGGER.debug("sorted order:::" + sortedSkills);
+		System.out.println("sorted order:::" + sortedSkills);
 		model.addAttribute("skillList", sortedSkills);
 		model.addAttribute("count", skillList.size());
 		return "employee_skill_list_by_manager";
@@ -559,13 +562,13 @@ public class EmployeeController {
 		model.addAttribute("count", jdList.size());
 		model.addAttribute("TableName",
 				"Jobs Posted By Client " + client.getClientName() + " from Company ::" + client.getClientCompany());
-		LOGGER.debug("jd list count:::");
+		System.out.println("jd list count:::");
 		return "employee_client_jdlist";
 	}
 
 	@GetMapping("/selectedCandidatesListForJD")
 	public String selectedCandidatesListForJD(Model model, HttpSession session) {
-		LOGGER.debug("selectedCandidatesListForJD:::method invoked:::::::::");
+		System.out.println("selectedCandidatesListForJD:::method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		List<Schedule> finalSelectedCandidatesList = objSchedule.stream().filter(
@@ -575,13 +578,13 @@ public class EmployeeController {
 		model.addAttribute("count", finalSelectedCandidatesList.size());
 		model.addAttribute("sessionEmployee", employee);
 		model.addAttribute("scheduleTable", "FeedbackList:: SELECTED Candidates" + finalSelectedCandidatesList.size());
-		LOGGER.debug("selected candidates:: count" + finalSelectedCandidatesList.size());
+		System.out.println("selected candidates:: count" + finalSelectedCandidatesList.size());
 		return "employee_jd_final_feedback_list";
 	}
 
 	@GetMapping("/rejectedCandidatesListForJD")
 	public String rejectedCandidatesListForJD(Model model, HttpSession session) {
-		LOGGER.debug(" rejecteddCandidatesListForJD/{id}::method invoked:::::::::");
+		System.out.println(" rejecteddCandidatesListForJD/{id}::method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		List<Schedule> finalRejectedCandidatesList = objSchedule.stream().filter(
@@ -596,7 +599,7 @@ public class EmployeeController {
 
 	@GetMapping("/finalFeedbackList")
 	public String finalFeedbackList(Model model, HttpSession session) {
-		LOGGER.debug("finalfeedbackList method invoked:::::::::");
+		System.out.println("finalfeedbackList method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		List<Schedule> finalFeedbackList = objSchedule.stream()
@@ -612,7 +615,7 @@ public class EmployeeController {
 	// candidateList by jobDescription who are assigned to an employee
 	@GetMapping("/listOfAppliedCandidates/{jdId}")
 	public String canndidateListByJd(@PathVariable int jdId, HttpSession session, Model model) {
-		LOGGER.debug("invoked::::::::::::::");
+		System.out.println("invoked::::::::::::::");
 		List<CandidateJdAssociation> associationList = candidateJdAssociationService.getAllCandidateJdAssociations();
 		List<CandidateJdAssociation> filteredList = associationList.stream()
 				.filter(list -> list.getJobDescription().getJdId() == jdId).collect(Collectors.toList());
@@ -625,13 +628,13 @@ public class EmployeeController {
 		model.addAttribute("candidateList", candidateList);
 		model.addAttribute("size", candidateList.size());
 		model.addAttribute("jobDescription", jobDescription);
-		LOGGER.debug("jdPoistion:::" + jobDescription.getPosition());
+		System.out.println("jdPoistion:::" + jobDescription.getPosition());
 		return "employee_candidate_jd_list";
 	}
 
 	@GetMapping("/listOfSelectedCandidates/{jdId}")
 	public String listOfSelectedCandidates(Model model, @PathVariable int jdId, HttpSession session) {
-		LOGGER.debug("finalfeedbackList method invoked:::::::::");
+		System.out.println("finalfeedbackList method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> objSchedule = scheduleService.finalFeedbackList(employee);
 		List<Schedule> finalFeedbackList = objSchedule.stream()
@@ -648,13 +651,13 @@ public class EmployeeController {
 
 	@GetMapping("/listOfJdsAppliedByCandidates/{candidateId}")
 	public String listOfJdsAppliedByCandidates(Model model, @PathVariable int candidateId, HttpSession session) {
-		LOGGER.debug("finalfeedbackList method invoked:::::::::");
+		System.out.println("finalfeedbackList method invoked:::::::::");
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		Candidate candidate = candidateService.getCandidateById(candidateId);
 		List<CandidateJdAssociation> associationList = candidateJdAssociationService.getAllCandidateJdAssociations();
 		List<CandidateJdAssociation> filteredList = associationList.stream()
 				.filter(list -> list.getCandidate().getCandidateId() == candidateId).collect(Collectors.toList());
-		LOGGER.debug("can Jd applied List::count::" + filteredList.size());
+		System.out.println("can Jd applied List::count::" + filteredList.size());
 		model.addAttribute("canJDAsosList", filteredList);
 		model.addAttribute("count", filteredList.size());
 		model.addAttribute("sessionEmployee", employee);
@@ -683,32 +686,13 @@ public class EmployeeController {
 		Employee employee = (Employee) session.getAttribute("employeeObj");
 		List<Schedule> allSchedules = scheduleService.getAllSchedulesById(employee);
 		List<Schedule> upComingSchedules = allSchedules.stream()
-				.filter(scheduleobj -> scheduleobj.getStatus()==null && !(scheduleobj.equals(LocalDate.now())))
+				.filter(scheduleobj -> scheduleobj.getStatus()==null && !(scheduleobj.getDate().equals(LocalDate.now())))
 				.toList();
-		LOGGER.debug("upComingschedulesCount:::"+upComingSchedules.size());
+		System.out.println("upComingschedulesCount:::"+upComingSchedules.size());
 		model.addAttribute("scheduleList", upComingSchedules);
 		model.addAttribute("size", upComingSchedules.size());
 		model.addAttribute("scheduleTable", "UpComing Schedules");
 		return "employee_schedule_list";
-	}
-	
-	
-	//testing
-	@GetMapping("/test")
-	public String testLogin(String error,String logout,Model model) {
-		 if (error != null)
-	            model.addAttribute("error", "Your username and password is invalid.");
 
-	        if (logout != null)
-	            model.addAttribute("message", "You have been logged out successfully.");
-	        
-	        
-		return "aaa";
 	}
-	
-	
-	
-	
-	
-	
 }

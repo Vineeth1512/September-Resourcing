@@ -2,19 +2,55 @@
 <html lang="en" xmlns:th="https://thymleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+
 <title>360Resourcing</title>
+<style>
+.blink {
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+@-webkit-keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 500px;
+}
+
+.h1 {
+	display: block;
+}
+</style>
+
 </head>
 <body>
-    <h2>
-       Some thing went wrong!!
-    </h2>
-    <h2>
-        <span th:text="${homepage}"></span> <a href="/resourcing"><i
-            class="icon-material-outline-power-settings-new"></i> Home page</a>
-    </h2>
-   
-   
-   <!--  <h2>
+
+
+	<div class="box"
+		style="justify-content: center;
+	/*this centers the text vertically*/ align-items: center; height:auto; color: #fff; font-size: xx-large; font-weight: bold; background-color: aqua;">
+		<h2>
+			something went wrong!!!<span style="color: blue;"
+				th:text="${message}"></span>
+		</h2>
+		<h1>
+			<a href="/resourcing"><span class="blink" style="background-color: yellow; text-decoration: underline;">
+					Home page</span></a>
+		</h1>
+	</div>
+
+
+	<!--  <h2>
         <span th:text="${candidateDashboard}"></span> <a
             th:href="@{/candidate/dashboard/{id}(id=${session.candidateObj.candidateId})}"><i
             class="icon-material-outline-settings"></i>Candidate DashBoard</a>
@@ -44,6 +80,7 @@
     </h2>
  -->
 
-
 </body>
+
 </html>
+

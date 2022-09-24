@@ -44,6 +44,7 @@ import com.resourcing.service.EmployeeService;
 import com.resourcing.service.EmploymentService;
 import com.resourcing.service.InterviewPanelService;
 import com.resourcing.service.JobDescriptionService;
+import com.resourcing.service.QRCodeGeneratorService;
 import com.resourcing.service.ScheduleService;
 import com.resourcing.service.SkillInterviewerAssociationService;
 import com.resourcing.service.SkillService;
@@ -85,6 +86,9 @@ public class UserController {
 
 	@Autowired
 	ScheduleService scheduleService;
+	
+	@Autowired
+	QRCodeGeneratorService qrCodeGeneratorService;
 	
 	@Autowired
 	private EmployeeClientAssociationService employeeClientAssociationService;
@@ -129,6 +133,8 @@ public class UserController {
 			ModelAndView mav = new ModelAndView("user_dashboard");
 			LOGGER.debug("dashboard page is displayed");
 //			mav.addObject("sessionUser", sessionUser);
+			List<Employee> employeesList = employeeService.getActiveRecruitersListOfThisbranch(userObj.getBranch());
+			mav.addObject("employeesCount", employeesList.size());
 			mav.addObject("candidatesCount", candidateService.getAllCandidates().size());
 			mav.addObject("jobsCount", jobDescriptionService.getAllJobDescriptions().size());
 			mav.addObject("clientsCount", clientList.size());
@@ -147,16 +153,16 @@ public class UserController {
 	// User Dashboard
 	@RequestMapping(value = "/userDashboard", method = RequestMethod.GET)
 	public ModelAndView userDashboard(Model model, HttpSession session) {
-		session.getAttribute("userObj");
 		User sessionUser = (User) session.getAttribute("userObj");
 		ModelAndView mav = new ModelAndView("user_dashboard");
 		List<Client> clientList = clientService.clientListByUser(sessionUser);
+		List<Employee> employeesList = employeeService.getActiveRecruitersListOfThisbranch(sessionUser.getBranch());
 		LOGGER.debug("dashboard page is displayed");
 		mav.addObject("sessionUser", sessionUser);
+		mav.addObject("employeesCount", employeesList.size());
 		mav.addObject("candidatesCount", candidateService.getAllCandidates().size());
 		mav.addObject("jobsCount", jobDescriptionService.getAllJobDescriptions().size());
 		mav.addObject("clientsCount", clientList.size());
-		mav.addObject("slectedCandidatesCount", scheduleService.selectedCandidateList().size());
 		return mav;
 	}
 
@@ -183,7 +189,6 @@ public class UserController {
 		User existUser = userService.findByUserNameIgnoreCaseAndPassword(userObj.getEmailId(), userObj.getPassword());
 		session.getAttribute("userObj");
 		User sessionUser = (User) session.getAttribute("userObj");
-
 		LOGGER.debug(" in update method employee created date::" + userObj.getCreatedDate());
 		LOGGER.debug("in update method userObj:: name " + userObj.getUserName());
 		userObj.setUpdatedBy(existUser.getUserId());
@@ -256,8 +261,7 @@ public class UserController {
 //		List<Employee> allEmpList = employeeService.getEmployeesListofThisbranch();
 		List<Employee> allEmpList = employeeService.allEmployeesList();
 		Stream<Employee> empStream = allEmpList.stream();
-		List<Employee> empList = empStream.filter(employee -> employee.getBranch().getBranchId() == (branchId))
-				.toList();
+		List<Employee> empList = empStream.filter(employee -> employee.getBranch().getBranchId() == (branchId)).toList();
 		LOGGER.debug("branchNames" + branchList);
 		model.addAttribute("sessionUser", sessionUser);
 		model.addAttribute("listOfEmployees", empList);
@@ -604,7 +608,6 @@ public class UserController {
 		mav.addObject("sessionUser", sessionUser);
 		mav.addObject("TableName", "employees List of " + branchName);
 		mav.addObject("branchList", branchList);
-
 		return mav;
 	}
 
@@ -620,7 +623,6 @@ public class UserController {
 		mav.addObject("branch", employeeObj.branch.getBranchName());
 		List<Branch> branchList = branchService.getByIsActive();
 		mav.addObject("branchList", branchList);
-
 		return mav;
 	}
 
@@ -637,6 +639,7 @@ public class UserController {
 		employeeExist.setEmployeeName(employee.getEmployeeName());
 		employeeExist.setEmployeeRole(employee.getEmployeeRole());
 		employeeExist.setEmailId(employee.getEmailId());
+		employeeExist.setBarCode(employee.getBarCode());
 		employeeExist.setBranch(branch);
 		employeeExist.setUpdatedBy(userId);
 		employeeExist.setUpdatedDate(LocalDateTime.now());
@@ -738,7 +741,6 @@ public class UserController {
 			mav.addObject("branch", branch);
 			mav.addObject("newUserDetails", newEmployee);
 			mav.addObject("sessionUser", sessionUser);
-
 			return mav;
 		} else {
 			LOGGER.debug("add employee by user::::" + newEmployee.getEmailId());
@@ -751,12 +753,16 @@ public class UserController {
 			newEmployee.setUpdatedBy(userId);
 			newEmployee.setUpdatedDate(LocalDateTime.now());
 			newEmployee.setCreatedBy(userId);
+			System.out.println("empId::"+newEmployee.getEmployeeId());
 			String branchName = (String) session.getAttribute("branchName");
 			LOGGER.debug("mep pwd user::" + newEmployee.getPassword());
 			String strEncPassword = Utilities.getEncryptSecurePassword(newEmployee.getPassword(), "RESOURCING");
 			LOGGER.debug("enPWD user::" + strEncPassword);
-
 			newEmployee.setPassword(strEncPassword); // while saving the user put this to encrypt pwd.
+			//this method will be called by class because its a static method
+			String barCodeBase64 = QRCodeGeneratorService.getBarCodeImage(newEmployee.getEmailId(), 200, 50);
+			System.out.println("barcode::"+barCodeBase64);
+			newEmployee.setBarCode(barCodeBase64);
 			employeeService.addNewEmployee(newEmployee);
 			ModelAndView mav = new ModelAndView("user_dashboard_employeelist");
 			mav.addObject("message", newEmployee.getEmployeeName() + " new Recruiter is added in " + branchName);

@@ -1,7 +1,7 @@
 
 <!-- ============================= -->
 
-<!-- 	Author: Praveen Gudimalla -->
+<!-- 	@Author: Srivani Tudi -->
 
 <!--  ==============================-->
 
@@ -14,7 +14,7 @@
 <title>360 Resourcing</title>
 <meta charset="utf-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
+	http-equiv="refresh" content="30*60" >
 <script src='https://kit.fontawesome.com/a076d05399.js'
 	crossorigin='anonymous'></script>
 
@@ -27,142 +27,181 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'
+	crossorigin='anonymous'></script>
+	<style>
+	.blink {
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+@-webkit-keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+	</style>
+
+
+
 </head>
-
 <body class="gray">
+	<span th:if="${session.employeeObj==null}"
+		style="display: flex;
+	/*this centers the text horizontally*/ justify-content: center;
+	/*this centers the text vertically*/ align-items: center; height: 200px; color: #fff; font-size: xx-large; font-weight: bold; background-color: aqua;"><a
+		th:href="@{/emp/login}"
+		style="color: red; font: 200; content: bold; align-self: center;  background-color: yellow ; " class="blink"> Please LOG IN</a></span>
+	<span th:if="${session.employeeObj!=null}"> <!-- Wrapper -->
+		<div id="wrapper">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-
-
-	<!-- Header Container
+			<!-- Header Container
 ================================================== -->
-		<header id="header-container"
-			class="fullwidth dashboard-header not-sticky">
+			<header id="header-container"
+				class="fullwidth dashboard-header not-sticky">
 
-			<!-- Header -->
-			<div id="header">
-				<div class="container">
-					<!-- Left Side Content -->
-					<div class="left-side">
-						<!-- Logo -->
-						<div id="logo">
-							<a href="#"><img src="/../../images/logo360.jpg" alt=""></a>
+				<!-- Header -->
+				<div id="header">
+					<div class="container">
+						<!-- Left Side Content -->
+						<div class="left-side">
+							<!-- Logo -->
+							<div id="logo">
+								<a href="#"><img src="/../../images/logo360.jpg" alt=""></a>
+							</div>
+							<!-- Main Navigation -->
+							<nav id="navigation">
+								<ul id="responsive">
+									<li><a href="#">Manage Candidates</a>
+										<ul class="dropdown-nav">
+											<li><a
+												th:href="@{/emp/candidateList/{employeeId}(employeeId=${session.employeeObj.employeeId})}">
+													Candidate List assigned to you</a></li>
+											<li><a th:href="@{/emp/candidateList}"> all
+													Candidate List</a></li>
+
+										</ul></li>
+									<li><a href="#">View Interviewers</a>
+										<ul class="dropdown-nav">
+											<li><a th:href="@{/emp/interviewersList}"> all
+													Interviewers List</a></li>
+										</ul></li>
+									<li><a href="#">View Clients</a>
+										<ul class="dropdown-nav">
+											<li><a th:href="@{/emp/employeeClients}">My client
+													List</a></li>
+										</ul></li>
+
+									<li><a href="#">Schedule Interviews</a>
+										<ul class="dropdown-nav">
+											<li><a th:href="@{/scheduleList}">Schedule List</a></li>
+											<li><a
+												th:href="@{/emp/feedbackList/{id}(id=${session.employeeObj.employeeId})}">Feedback
+													List</a></li>
+											<li><a
+												th:href="@{/emp/reScheduleList/{id}(id=${session.employeeObj.employeeId})}">ReSchedule</a></li>
+											<li><a th:href="@{/emp/finalFeedbackList}">Result</a></li>
+
+
+
+										</ul></li>
+								</ul>
+								<ul>
+									<li><a href="#">Manage skills</a>
+										<ul class="dropdown-nav">
+											<li><a
+												th:href="@{/emp/addSkillByManager/{id}(id=${session.employeeObj.employeeId})}">Adding
+													Skills</a></li>
+
+											<li><a
+												th:href="@{/emp/skillListByManager/{id}(id=${session.employeeObj.employeeId})}">Skills
+													List Added by Recruiter</a></li>
+
+										</ul></li>
+								</ul>
+							</nav>
 						</div>
-						<!-- Main Navigation -->
-						<nav id="navigation">
-							<ul id="responsive">
-								<li><a href="#">Manage Candidates</a>
-									<ul class="dropdown-nav">
-										<li><a
-											th:href="@{/emp/candidateList/{employeeId}(employeeId=${session.employeeObj.employeeId})}">
-												Candidate List assigned to you</a></li>
-										<li><a th:href="@{/emp/candidateList}"> all Candidate
-												List</a></li>
-
-									</ul></li>
-								<li><a href="#">View Interviewers</a>
-									<ul class="dropdown-nav">
-										<li><a th:href="@{/emp/interviewersList}"> all
-												Interviewers List</a></li>
-									</ul></li>
-								<li><a href="#">View Clients</a>
-									<ul class="dropdown-nav">
-										<li><a
-											th:href="@{/emp/employeeClients}">My
-												client List</a></li>
-									</ul></li>
-
-								<li><a href="#">Schedule Interviews</a>
-									<ul class="dropdown-nav">
-										<li><a th:href="@{/scheduleList}">Schedule List</a></li>
-										<li><a
-											th:href="@{/emp/feedbackList/{id}(id=${session.employeeObj.employeeId})}">Feedback
-												List</a></li>
-										<li><a
-											th:href="@{/emp/reScheduleList/{id}(id=${session.employeeObj.employeeId})}">ReSchedule</a></li>
-										<li><a th:href="@{/emp/finalFeedbackList}">Result</a></li>
-
-
-
-									</ul></li>
-							</ul>
-							<ul>
-								<li><a href="#">Manage skills</a>
-									<ul class="dropdown-nav">
-										<li><a
-											th:href="@{/emp/addSkillByManager/{id}(id=${session.employeeObj.employeeId})}">Adding
-												Skills</a></li>
-
-										<li><a
-											th:href="@{/emp/skillListByManager/{id}(id=${session.employeeObj.employeeId})}">Skills
-												List Added by Recruiter</a></li>
-
-									</ul></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="clearfix"></div>
-					<!-- Main Navigation / End -->
-					<!-- Left Side Content / End -->
-					<!-- Right Side Content -->
-					<div class="right-side">
-						<!--  User Notifications -->
-						<!--  User Notifications / End -->
-						<!-- User Menu -->
-						<div class="header-widget">
-							<!-- Messages -->
-							<div class="header-notifications user-menu">
-								<div class="header-notifications-trigger">
-									<a href="#"><div class="user-avatar status-online">
-											<img src="/../../images/user-avatar-small-01.jpg" alt="">
-										</div></a>
-								</div>
-								<!-- Dropdown -->
-								<div class="header-notifications-dropdown">
-									<!-- User Status -->
-									<div class="user-status">
-										<!-- User Name / Avatar -->
-										<div class="user-details">
-											<div class="user-avatar status-online">
-												<img src="/../../images/user-avatar-small-01.jpg" alt="">
-											</div>
-											<div class="user-name">
-												<h3 style="color: maroon"
-													th:text="${session.employeeObj.employeeName}"></h3>
-												<h4 style="color: green"
-													th:text="${session.employeeObj.employeeRole}"></h4>
-											</div>
-											<!-- User Status Switcher -->
-										</div>
+						<div class="clearfix"></div>
+						<!-- Main Navigation / End -->
+						<!-- Left Side Content / End -->
+						<!-- Right Side Content -->
+						<div class="right-side">
+							<!--  User Notifications -->
+							<!--  User Notifications / End -->
+							<!-- User Menu -->
+							<div class="header-widget">
+								<!-- Messages -->
+								<div class="header-notifications user-menu">
+									<div class="header-notifications-trigger">
+										<a href="#"><div class="user-avatar status-online">
+												<img th:if="${session.employeeObj.image==null}"
+													class="profile-pic"
+													src="/../../images/user-avatar-small-01.jpg" /> <img
+													th:unless="${session.employeeObj.image==null}"
+													th:src="${'data:image/jpeg;base64,'+{session.employeeObj.image}}"
+													class="profile-pic" style="width: 150px; height: 60px;">
+											</div></a>
 									</div>
-									<ul class="user-menu-small-nav">
-										<li><a th:href="@{/emp/employeeDashboard}"><i
-												class="icon-material-outline-dashboard"></i>DashBoard</a></li>
-										<li><a
-											th:href="@{/emp/employeeDasboardSettings/{id}(id=${session.employeeObj.employeeId})}"><i
-												class="icon-material-outline-settings"></i> Settings</a></li>
-										<li><a th:href="@{/emp/employeeLogout}"><i
-												class="icon-material-outline-power-settings-new"></i> Logout</a></li>
-									</ul>
+									<!-- Dropdown -->
+									<div class="header-notifications-dropdown">
+										<!-- User Status -->
+										<div class="user-status">
+											<!-- User Name / Avatar -->
+											<div class="user-details">
+												<div class="user-avatar status-online">
+													<img th:if="${session.employeeObj.image==null}"
+														class="profile-pic"
+														src="/../../images/user-avatar-small-01.jpg" /> <img
+														th:unless="${session.employeeObj.image==null}"
+														th:src="${'data:image/jpeg;base64,'+{session.employeeObj.image}}"
+														class="profile-pic" style="width: 150px; height: 60px;">
+												</div>
+												<div class="user-name">
+													<h3 style="color: maroon"
+														th:text="${session.employeeObj.employeeName}"></h3>
+													<h4 style="color: green"
+														th:text="${session.employeeObj.employeeRole}"></h4>
+													<h4 style="color: maroon"
+														th:text="${session.employeeObj.branch.branchName}"></h4>
+													<h4 style="color: maroon"
+														th:text="${session.employeeObj.branch.company.companyName}"></h4>
+												</div>
+												<!-- User Status Switcher -->
+											</div>
+										</div>
+										<ul class="user-menu-small-nav">
+											<li><a th:href="@{/emp/employeeDashboard}"><i
+													class="icon-material-outline-dashboard"></i>DashBoard</a></li>
+											<li><a
+												th:href="@{/emp/employeeDasboardSettings/{id}(id=${session.employeeObj.employeeId})}"><i
+													class="icon-material-outline-settings"></i> Settings</a></li>
+											<li><a th:href="@{/emp/employeeLogout}"><i
+													class="icon-material-outline-power-settings-new"></i>
+													Logout</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
+							<!-- User Menu / End -->
+							<!-- Mobile Navigation Button -->
+							<span class="mmenu-trigger">
+								<button class="hamburger hamburger--collapse" type="button">
+									<span class="hamburger-box"> <span
+										class="hamburger-inner"></span>
+									</span>
+								</button>
+							</span>
 						</div>
-						<!-- User Menu / End -->
-						<!-- Mobile Navigation Button -->
-						<span class="mmenu-trigger">
-							<button class="hamburger hamburger--collapse" type="button">
-								<span class="hamburger-box"> <span
-									class="hamburger-inner"></span>
-								</span>
-							</button>
-						</span>
+						<!-- Right Side Content / End -->
 					</div>
-					<!-- Right Side Content / End -->
 				</div>
-			</div>
-			<!-- Header / End -->
-		</header>
+				<!-- Header / End -->
+			</header>
 		<div class="clearfix"></div>
 		<!-- Header Container / End -->
 		<!-- Dashboard Container -->
@@ -302,6 +341,9 @@
 
 			</div>
 			<!-- Wrapper / End -->
+			</div>
+			</div>
+			</span>
 
 			<!-- Scripts
 ================================================== -->

@@ -55,8 +55,8 @@ import com.resourcing.service.CandidateService;
 import com.resourcing.service.DocStorageService;
 import com.resourcing.service.EducationService;
 import com.resourcing.service.EmailSenderService;
-import com.resourcing.service.EmployeeService;
 import com.resourcing.service.JobDescriptionService;
+import com.resourcing.service.QRCodeGeneratorService;
 import com.resourcing.service.ScheduleService;
 import com.resourcing.utilities.Utilities;
 
@@ -65,6 +65,9 @@ import com.resourcing.utilities.Utilities;
 public class CandidateController {
 
 	static Logger LOGGER = Logger.getLogger(CandidateController.class);
+	
+	private static final int WIDTH = 500;
+    private static final int HEIGHT = 500;
 
 	@Autowired
 	CandidateService candidateService;
@@ -88,18 +91,21 @@ public class CandidateController {
 	private ScheduleService scheduleService;
 
 	@Autowired
-	private EmployeeService employeeService;
-
-	@Autowired
 	private CandidateJdAssociationService candidateJdAssociationService;
+	
+	@Autowired
+	private QRCodeGeneratorService qrCodeGeneratorService;
 
 	// Insert candidate record
 	@GetMapping(value = "/saveCandidate")
-	public String saveCandidate(Model model, @ModelAttribute("candidate") Candidate candidate,RedirectAttributes redirectAttributes) {
+	public String saveCandidate(Model model, @ModelAttribute("candidate") Candidate candidate,
+			RedirectAttributes redirectAttributes) {
 		Candidate candidateObj = candidateService.findByEmail(candidate.getEmail());
 		if (candidateObj == null) {
 			String strEncPassword = Utilities.getEncryptSecurePassword(candidate.getPassword(), "GLAM");
 			candidate.setPassword(strEncPassword); // while saving the candidate set this to encrypt pwd.
+			String qrCodeBase64 = qrCodeGeneratorService.generateQrCodeBase64(candidate.getEmail(), 500, 500);
+			candidate.setQrCode(qrCodeBase64);
 			candidateService.addCandidate(candidate);
 			candidate.setCreatedDate(LocalDateTime.now());
 			LOGGER.debug("created date:::" + candidate.getCreatedDate());
@@ -125,7 +131,6 @@ public class CandidateController {
 			@RequestParam(required = false) String message,
 			final HttpServletResponse response, HttpSession session) {
 		LOGGER.debug("add candidate::::");
-		
 		final StringBuffer url1 = request.getRequestURL();
 		HttpSession sessionOne = request.getSession();
 		sessionOne.setAttribute("url", url1);
@@ -141,13 +146,18 @@ public class CandidateController {
 	// verification of mail if it is valid or not
 	@RequestMapping("/verification")
 	public String validatemail(Model model, Candidate candidate, final HttpServletRequest request,RedirectAttributes redirectAttributes,
-			final HttpServletResponse response, HttpSession session) throws MessagingException {
+			String contentToGenerate, final HttpServletResponse response, HttpSession session) throws MessagingException {		
 		Candidate candidateObj = candidateService.findByEmail(candidate.getEmail());
 		if (candidateObj != null) {
 			LOGGER.debug("verififcation:::");
 			redirectAttributes.addFlashAttribute("message", candidate.getEmail() + "  is already exists!! please try with another mail!!");
 			return "redirect:/candidate";
 		} else {
+			System.out.println("else:::::");
+		//	String qrCodeBase64 = qrCodeGeneratorService.generateQrCodeBase64(candidate.getEmail(), WIDTH, HEIGHT);
+			System.out.println("else2::::");
+		//	candidate.setQrCode(qrCodeBase64);
+			System.out.println("else3:::");
 			final StringBuffer uri = request.getRequestURL();
 			LOGGER.debug(uri);
 			model.addAttribute("Emailid", candidate.getEmail());
@@ -157,7 +167,7 @@ public class CandidateController {
 			LOGGER.debug("::::::::::::::::: 3" + candidate.getEmail());
 			mailMessage.setSubject("Complete Registration!");
 			LOGGER.debug("::::::::::::::::: 4" + candidate.getEmail());
-			mailMessage.setFrom("t.srivani488@gmail.com");
+			mailMessage.setFrom("resourcingproject360@gmail.com");
 			LOGGER.debug("::::::::::::::::: 5" + candidate.getEmail());
 			mailMessage.setText("To confirm your account, please click here : " + session.getAttribute("url")
 					+ "/saveCandidate?email=" + candidate.getEmail() + "&password=" + candidate.getPassword());
@@ -193,6 +203,8 @@ public class CandidateController {
 		candidateObj.setUpdatedDate(LocalDateTime.now());
 		candidateObj.setCreatedDate(existCandidate.getCreatedDate());
 		candidateObj.setCreatedBy(existCandidate.getCandidateId());
+		candidateObj.setEmployeeObj(existCandidate.getEmployeeObj());
+		candidateObj.setQrCode(existCandidate.getQrCode());
 		LocalDate currentDate = LocalDate.now();
 		Period period = Period.between(candidateObj.getDateOfBirth(), currentDate);
 		candidateObj.setAge(period.getYears() + " years " + period.getMonths() + " months " + period.getDays() + " days");
@@ -201,7 +213,7 @@ public class CandidateController {
 		} else {
 			candidateObj.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
 		}
-		candidateRepository.save(candidateObj);
+		candidateService.addCandidate(candidateObj);
 		redirectAttributes.addFlashAttribute("message", "candidate details are updates");
 		return "redirect:/candidate/dashboardSettings/" + id;
 	}

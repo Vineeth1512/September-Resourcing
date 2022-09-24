@@ -18802,3 +18802,548 @@
 2022-09-21 16:37:58:411  DEBUG  com.resourcing.controller.JobDescriptionController  getJdListForUnknown 85 size::::0.0 
 2022-09-22 15:30:34:784  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
 2022-09-22 16:20:42:803  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-23 14:07:49:064  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::xu416y 
+2022-09-23 14:07:49:068  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::xu416y 
+2022-09-23 14:07:49:142  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 14:07:49:142  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 14:07:49:142  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 14:07:49:143  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 14:07:49:189  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 14:07:49:190  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 14:07:49:190  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 14:07:49:191  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 14:07:57:255  DEBUG  com.resourcing.controller.EducationController  newEducation 78 add Education details method::::1 
+2022-09-23 14:08:08:882  DEBUG  com.resourcing.controller.EducationController  updateEducation 89 createddate:::::2022-08-29T17:32:41.061420 
+2022-09-23 14:08:15:052  DEBUG  com.resourcing.controller.EducationController  updateEducationDetails 101 created date new::::2022-08-29T17:32:41.061420 
+2022-09-23 14:10:06:882  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::xu416y 
+2022-09-23 14:10:06:884  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::xu416y 
+2022-09-23 14:10:06:937  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 14:10:06:938  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 14:10:06:938  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 14:10:06:938  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 14:10:06:939  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 14:10:06:940  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 14:10:06:941  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 14:10:06:941  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 14:10:59:598  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::xu416y 
+2022-09-23 14:10:59:600  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::xu416y 
+2022-09-23 14:10:59:625  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 14:10:59:625  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 14:10:59:625  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 14:10:59:626  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 14:10:59:626  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 14:10:59:626  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 14:10:59:626  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 14:10:59:626  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 14:11:09:483  DEBUG  com.resourcing.controller.EducationController  updateEducation 89 createddate:::::2022-08-29T17:32:41.061420 
+2022-09-23 14:11:21:847  DEBUG  com.resourcing.controller.EducationController  updateEducationDetails 101 created date new::::2022-08-29T17:32:41.061420 
+2022-09-23 14:18:03:938  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::xu416y 
+2022-09-23 14:18:03:938  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::xu416y 
+2022-09-23 14:18:03:957  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 14:18:03:958  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 14:18:03:959  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 14:22:54:228  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::xu416y 
+2022-09-23 14:22:54:234  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::xu416y 
+2022-09-23 14:22:54:444  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 14:22:54:445  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 14:22:54:445  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 14:22:54:446  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 14:22:54:446  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 14:22:54:446  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 14:22:54:447  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 14:22:54:447  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 14:53:12:818  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-23 15:08:55:367  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 238 getCaptcha:::::BTXe&p 
+2022-09-23 15:08:55:372  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 239 getUserCaptcha::::::BTXe&p 
+2022-09-23 15:08:55:433  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 247 email:::::gudimallapraveen33@gmail.com 
+2022-09-23 15:08:55:433  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 248 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-23 15:08:55:433  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 login successfully 
+2022-09-23 15:08:55:434  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 252 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-23 15:08:55:491  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 254 session created::::: 
+2022-09-23 15:08:55:492  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 256 session created::::::::::::::::::::::::::::::::: 
+2022-09-23 15:08:55:493  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 257 session working::::: 
+2022-09-23 15:08:55:493  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 objschedule:::::: 
+2022-09-23 15:27:58:606  DEBUG  com.resourcing.controller.CandidateController  logout 366 session:::null 
+2022-09-23 16:05:18:271  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-23 16:14:13:575  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-23 16:15:17:097  DEBUG  com.resourcing.controller.CandidateController  newCandidate 127 add candidate:::: 
+2022-09-23 16:15:17:100  DEBUG  com.resourcing.controller.CandidateController  newCandidate 132 url1::::::http://localhost:8080/candidate 
+2022-09-23 16:35:33:066  INFO   com.resourcing.controller.InterviewPanelController  getloginPage 125 entered into user/controller:::: login method 
+2022-09-23 16:36:02:683  INFO   com.resourcing.controller.InterviewPanelController  validateUsermethod 135 entered into validation method 
+2022-09-23 16:36:02:715  INFO   com.resourcing.controller.InterviewPanelController  validateUsermethod 139 validation method done 
+2022-09-23 16:36:02:746  DEBUG  com.resourcing.controller.InterviewPanelController  validateUsermethod 143 id:::::1 
+2022-09-23 16:36:02:747  DEBUG  com.resourcing.controller.InterviewPanelController  validateUsermethod 144 interviewer session is created 
+2022-09-23 16:36:02:747  INFO   com.resourcing.controller.InterviewPanelController  validateUsermethod 146 controller validation method username is:pavan@gmail.com 
+2022-09-23 16:36:12:998  DEBUG  com.resourcing.controller.SkillInterviewerAssociationController  getSkillList 101 skill list 
+2022-09-23 16:36:13:005  DEBUG  com.resourcing.controller.SkillInterviewerAssociationController  getSkillList 105 skill list visible[com.resourcing.beans.SkillInterviewerAssosiation@17ba71a0, com.resourcing.beans.SkillInterviewerAssosiation@7cca5439, com.resourcing.beans.SkillInterviewerAssosiation@7e9b554b, com.resourcing.beans.SkillInterviewerAssosiation@156628a3, com.resourcing.beans.SkillInterviewerAssosiation@51156cde, com.resourcing.beans.SkillInterviewerAssosiation@7f509159] 
+2022-09-23 16:36:13:005  DEBUG  com.resourcing.controller.SkillInterviewerAssociationController  getSkillList 108 success::: 
+2022-09-23 16:36:14:240  DEBUG  com.resourcing.controller.InterviewPanelController  getAvailabilityOfOneInterviewer 418 this will get the inteviewers availability schedule:::1 
+2022-09-23 16:36:14:243  DEBUG  com.resourcing.controller.InterviewPanelController  getAvailabilityOfOneInterviewer 420 finding the interviewer_id value:::1 
+2022-09-23 16:36:24:028  DEBUG  com.resourcing.controller.InterviewPanelController  dashboardPage 183 pending count:::0 
+2022-09-23 16:37:12:222  DEBUG  com.resourcing.controller.InterviewPanelController  dashboardPage 183 pending count:::0 
+2022-09-23 16:37:20:189  INFO   com.resourcing.controller.InterviewPanelController  userlogout 306 logout method in controller activated 
+2022-09-23 16:37:20:190  INFO   com.resourcing.controller.InterviewPanelController  userlogout 310 interviewername after session after sessio.invalidate():null 
+2022-09-23 16:37:23:401  DEBUG  com.resourcing.controller.UserController  employeeloginPage 100 entered into user/controller:::: login method 
+2022-09-23 16:37:28:697  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 16:37:28:698  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:37:28:892  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 16:37:28:893  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 16:37:28:893  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663931243498 
+2022-09-23 16:37:28:893  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 16:37:28:894  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@f31a644 
+2022-09-23 16:37:28:894  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:37:28:894  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 16:37:28:894  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 16:37:29:204  DEBUG  com.resourcing.controller.UserController  validatemethod 136 user company Name::vedainfo 
+2022-09-23 16:37:34:941  DEBUG  com.resourcing.controller.UserController  getAllCandidates 923 inside getAllCandidates this will get the all Candidates::: 
+2022-09-23 16:37:46:997  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:37:47:002  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:37:47:181  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 16:37:57:167  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:39:40:870  DEBUG  com.resourcing.controller.UserController  UserLogout 463 entered into user/controller::::logged out 
+2022-09-23 16:39:46:506  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-23 16:39:53:546  DEBUG  com.resourcing.controller.AdminUserController  validatemethod 174 entered into validation method 
+2022-09-23 16:39:53:554  DEBUG  com.resourcing.controller.AdminUserController  validatemethod 197 else block of validation:::: Use valid details 
+2022-09-23 16:40:21:914  DEBUG  com.resourcing.controller.AdminUserController  validatemethod 174 entered into validation method 
+2022-09-23 16:40:22:394  INFO   com.resourcing.controller.AdminUserController  validatemethod 194 admin dashboard  page is displayed 
+2022-09-23 16:41:13:551  DEBUG  com.resourcing.controller.UserController  employeeloginPage 100 entered into user/controller:::: login method 
+2022-09-23 16:41:19:396  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 16:41:19:396  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:41:19:572  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 16:41:19:573  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 16:41:19:573  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663931473640 
+2022-09-23 16:41:19:574  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 16:41:19:574  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@72ea621e 
+2022-09-23 16:41:19:575  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:41:19:575  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 16:41:19:575  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 16:41:19:905  DEBUG  com.resourcing.controller.UserController  validatemethod 136 user company Name::vedainfo 
+2022-09-23 16:41:25:755  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:41:25:760  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:41:25:907  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 16:41:29:698  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:41:31:625  DEBUG  com.resourcing.controller.UserController  getAllCandidates 923 inside getAllCandidates this will get the all Candidates::: 
+2022-09-23 16:42:09:765  DEBUG  com.resourcing.controller.AdminUserController  getAllEmployees 508 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:42:14:383  DEBUG  com.resourcing.controller.AdminUserController  getAllEmployees 508 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:43:07:621  DEBUG  com.resourcing.controller.AdminUserController  getAllEmployees 508 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:43:24:890  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 253 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:43:25:118  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 261 branchNames[Branch(user=[com.resourcing.beans.User@5ea19ae], company=com.resourcing.beans.Company@40e64e5c, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@1678ec9b], company=com.resourcing.beans.Company@40e64e5c, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 16:43:52:049  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 253 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:43:52:209  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 261 branchNames[Branch(user=[com.resourcing.beans.User@6c5e2f2f], company=com.resourcing.beans.Company@142bf4fa, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@4cc94c30], company=com.resourcing.beans.Company@142bf4fa, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 16:43:55:436  DEBUG  com.resourcing.controller.UserController  getRecruitersList 315 We get Recruiters List of this Branch::: 
+2022-09-23 16:43:55:575  DEBUG  com.resourcing.controller.UserController  getRecruitersList 319 Employee List of this branch[com.resourcing.beans.Employee@7031d11f, com.resourcing.beans.Employee@12929a78, com.resourcing.beans.Employee@53ca5444, com.resourcing.beans.Employee@93959ea] 
+2022-09-23 16:44:05:477  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:49:21:289  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:49:24:215  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:49:28:857  DEBUG  com.resourcing.controller.UserController  getAllCandidates 479 inside getAllCandidates this will get the all Candidates::: 
+2022-09-23 16:49:29:036  DEBUG  com.resourcing.controller.UserController  getAllCandidates 486 recruitersList of this branch::4 
+2022-09-23 16:49:40:075  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 275 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:49:40:280  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 278 branchNames[Branch(user=[com.resourcing.beans.User@7c5eed84], company=com.resourcing.beans.Company@57b82f65, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@199ff93], company=com.resourcing.beans.Company@57b82f65, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 16:49:44:392  DEBUG  com.resourcing.controller.UserController  viewHomePages 222 branchNames[Ameerpet, Mumbai] 
+2022-09-23 16:50:20:488  DEBUG  com.resourcing.controller.UserController  clientRegisterPageUsingUserId 780 entered into user/controller::::register method 
+2022-09-23 16:50:56:869  DEBUG  com.resourcing.controller.UserController  registerClient 789 branch0 
+2022-09-23 16:50:56:873  DEBUG  com.resourcing.controller.UserController  registerClient 797 register::::mallik@gmail.com 
+2022-09-23 16:50:56:873  DEBUG  com.resourcing.controller.UserController  registerClient 798 register::::Mallik@123 
+2022-09-23 16:50:56:874  DEBUG  com.resourcing.controller.UserController  registerClient 799 branch0 
+2022-09-23 16:50:56:874  DEBUG  com.resourcing.controller.UserController  registerClient 801  admin clients list  is displayed 
+2022-09-23 16:51:08:820  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:51:08:824  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:51:08:973  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 16:51:22:512  DEBUG  com.resourcing.controller.UserController  manageEmployeesPage 597 entered into user/controller::::  
+2022-09-23 16:51:31:325  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:51:32:570  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 169 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 16:51:32:576  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 171 id::::4 
+2022-09-23 16:51:32:577  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 172 userObj Id:::Srivani 
+2022-09-23 16:51:36:263  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:51:45:661  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:51:45:665  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:51:45:829  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 16:51:48:665  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:51:56:499  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 253 inside getAllEmployees this will get the all employees::: 
+2022-09-23 16:51:56:697  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 261 branchNames[Branch(user=[com.resourcing.beans.User@5f121220], company=com.resourcing.beans.Company@660b47b7, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@45f74745], company=com.resourcing.beans.Company@660b47b7, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 16:52:43:906  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:54:25:458  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:54:25:463  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:54:25:596  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 16:54:29:022  DEBUG  com.resourcing.controller.UserController  userDashboard 154 dashboard page is displayed 
+2022-09-23 16:57:19:198  DEBUG  com.resourcing.controller.UserController  UserLogout 463 entered into user/controller::::logged out 
+2022-09-23 16:57:22:967  DEBUG  com.resourcing.controller.UserController  employeeloginPage 100 entered into user/controller:::: login method 
+2022-09-23 16:58:19:995  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 16:58:19:995  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:58:19:998  DEBUG  com.resourcing.controller.UserController  validatemethod 139 else block of validation:::: Use valid details 
+2022-09-23 16:58:30:112  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 16:58:30:112  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:58:30:114  DEBUG  com.resourcing.controller.UserController  validatemethod 139 else block of validation:::: Use valid details 
+2022-09-23 16:58:31:778  DEBUG  com.resourcing.controller.UserController  UserforgotPasswordPage 415 entered into user/controller::::forgot paswword method 
+2022-09-23 16:58:35:675  DEBUG  com.resourcing.controller.UserController  checkMailId 426 entered into user/controller::::check EmailId existing or not 
+2022-09-23 16:58:35:676  DEBUG  com.resourcing.controller.UserController  checkMailId 427 UI given mail Id:vani@gmail.com 
+2022-09-23 16:58:35:680  DEBUG  com.resourcing.controller.UserController  checkMailId 430 UI given mail Id:vani@gmail.com 
+2022-09-23 16:58:41:141  DEBUG  com.resourcing.controller.UserController  updateUserPassword 444 user controller::: update password method 
+2022-09-23 16:58:41:153  DEBUG  com.resourcing.controller.UserController  updateUserPassword 451 password is updated sucessfully 
+2022-09-23 16:58:41:153  DEBUG  com.resourcing.controller.UserController  updateUserPassword 452 password is updated sucessfully 
+2022-09-23 16:58:41:153  DEBUG  com.resourcing.controller.UserController  updateUserPassword 456 login page is displayed 
+2022-09-23 16:58:46:873  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 16:58:46:873  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663932521216 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@2749a05d 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 16:58:46:934  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 16:58:47:055  DEBUG  com.resourcing.controller.UserController  validatemethod 136 user company Name::vedainfo 
+2022-09-23 16:59:09:535  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 852 id:::4 
+2022-09-23 16:59:09:537  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 branchId:::4 
+2022-09-23 16:59:09:595  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 860 branchId::::::::4 
+2022-09-23 17:02:39:267  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 17:02:39:270  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:02:39:601  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 17:02:39:602  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 17:02:39:602  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663932553740 
+2022-09-23 17:02:39:602  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 17:02:39:603  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@4d6283c 
+2022-09-23 17:02:39:603  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:02:39:604  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 17:02:39:605  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 17:02:40:141  DEBUG  com.resourcing.controller.UserController  validatemethod 136 user company Name::vedainfo 
+2022-09-23 17:02:53:957  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 255 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:02:54:163  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 262 branchNames[Branch(user=[com.resourcing.beans.User@440dc64c], company=com.resourcing.beans.Company@355b46ae, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@526828da], company=com.resourcing.beans.Company@355b46ae, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:04:34:245  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 17:04:34:246  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:04:34:392  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 17:04:34:392  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 17:04:34:392  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663932777473 
+2022-09-23 17:04:34:392  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 17:04:34:393  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@796883a2 
+2022-09-23 17:04:34:393  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:04:34:393  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 17:04:34:393  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 17:04:34:598  DEBUG  com.resourcing.controller.UserController  validatemethod 136 user company Name::vedainfo 
+2022-09-23 17:04:38:218  DEBUG  com.resourcing.controller.UserController  userDashboard 156 dashboard page is displayed 
+2022-09-23 17:06:33:433  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 17:06:33:434  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:06:33:571  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 17:06:33:571  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663932991304 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@32cca2f8 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 17:06:33:572  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 17:06:33:747  DEBUG  com.resourcing.controller.UserController  validatemethod 138 user company Name::vedainfo 
+2022-09-23 17:06:38:338  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:06:40:896  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:06:49:022  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:06:49:108  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@4b177c9a], company=com.resourcing.beans.Company@5d9f1a4d, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@582e5d7a], company=com.resourcing.beans.Company@5d9f1a4d, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:07:30:185  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:07:30:255  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@50226d8c], company=com.resourcing.beans.Company@19983964, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@19cd8362], company=com.resourcing.beans.Company@19983964, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:07:48:628  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:07:48:800  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@767437d4], company=com.resourcing.beans.Company@1ba19040, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@2c0e0e32], company=com.resourcing.beans.Company@1ba19040, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:07:52:002  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 277 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:07:52:076  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 280 branchNames[Branch(user=[com.resourcing.beans.User@59067d8], company=com.resourcing.beans.Company@7729066, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@7da7c437], company=com.resourcing.beans.Company@7729066, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:07:54:133  DEBUG  com.resourcing.controller.UserController  getAllCandidates 481 inside getAllCandidates this will get the all Candidates::: 
+2022-09-23 17:07:54:195  DEBUG  com.resourcing.controller.UserController  getAllCandidates 488 recruitersList of this branch::4 
+2022-09-23 17:08:34:757  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 17:08:34:760  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:08:34:974  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 17:08:34:974  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 17:08:34:974  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663933112959 
+2022-09-23 17:08:34:974  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663931162720 
+2022-09-23 17:08:34:975  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@1d672231 
+2022-09-23 17:08:34:975  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:08:34:975  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 17:08:34:975  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 17:08:35:261  DEBUG  com.resourcing.controller.UserController  validatemethod 138 user company Name::vedainfo 
+2022-09-23 17:08:36:816  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:08:38:540  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:08:41:849  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:08:41:935  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@2a59bcf4], company=com.resourcing.beans.Company@45a12e89, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@157af0c5], company=com.resourcing.beans.Company@45a12e89, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:08:44:242  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 720 entered into user/controller::::add employee method 
+2022-09-23 17:08:44:249  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 722 entered into user/controller::::add employee for branch Id3 
+2022-09-23 17:08:46:377  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 id:::4 
+2022-09-23 17:08:46:381  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 856 branchId:::4 
+2022-09-23 17:08:46:431  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 862 branchId::::::::4 
+2022-09-23 17:08:48:323  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:08:50:878  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:08:50:946  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@22a0e9e3], company=com.resourcing.beans.Company@63a5babf, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@30a014fc], company=com.resourcing.beans.Company@63a5babf, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:08:52:847  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:08:56:009  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 256 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:08:56:077  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfThisBranch 263 branchNames[Branch(user=[com.resourcing.beans.User@21b511ed], company=com.resourcing.beans.Company@7fba2240, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@7bc22801], company=com.resourcing.beans.Company@7fba2240, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:08:59:135  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:09:02:597  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 id:::4 
+2022-09-23 17:09:02:602  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 856 branchId:::4 
+2022-09-23 17:09:02:678  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 862 branchId::::::::4 
+2022-09-23 17:09:04:671  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:09:10:273  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 173 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 17:09:10:279  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 175 id::::4 
+2022-09-23 17:09:10:279  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 176 userObj Id:::Srivani 
+2022-09-23 17:09:19:329  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 173 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 17:09:19:332  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 175 id::::4 
+2022-09-23 17:09:19:332  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 176 userObj Id:::Srivani 
+2022-09-23 17:09:24:843  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:10:13:963  DEBUG  com.resourcing.controller.UserController  getAllCandidates 925 inside getAllCandidates this will get the all Candidates::: 
+2022-09-23 17:10:17:371  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:10:19:585  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 id:::4 
+2022-09-23 17:10:19:589  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 856 branchId:::4 
+2022-09-23 17:10:19:640  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 862 branchId::::::::4 
+2022-09-23 17:10:26:281  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 173 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 17:10:26:284  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 175 id::::4 
+2022-09-23 17:10:26:285  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 176 userObj Id:::Srivani 
+2022-09-23 17:10:28:115  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:10:29:782  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 854 id:::4 
+2022-09-23 17:10:29:783  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 856 branchId:::4 
+2022-09-23 17:10:29:838  DEBUG  com.resourcing.controller.UserController  getListOfClientsByUserId 862 branchId::::::::4 
+2022-09-23 17:10:41:174  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 880 method invoked 
+2022-09-23 17:10:41:175  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 881 Inside eca saving eca METHOD clientID::::::17 
+2022-09-23 17:10:41:175  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 882 Inside eca saving eca METHOD::::::Employeeid 7 
+2022-09-23 17:10:41:178  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 894 if:::::::::::::: 
+2022-09-23 17:10:41:179  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 897 eca::id0 
+2022-09-23 17:10:41:247  DEBUG  com.resourcing.controller.UserController  getEmpCliAssPage 903 com.resourcing.beans.EmployeeClientAssociation@30dd0325 
+2022-09-23 17:12:41:809  DEBUG  com.resourcing.controller.UserController  userDashboard 157 dashboard page is displayed 
+2022-09-23 17:12:45:290  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 277 inside getAllEmployees this will get the all employees::: 
+2022-09-23 17:12:45:352  DEBUG  com.resourcing.controller.UserController  getAllEmployeesOfCompany 280 branchNames[Branch(user=[com.resourcing.beans.User@6ad02ff], company=com.resourcing.beans.Company@2c003168, employeeObj=[], interviewPanel=[], branchId=3, branchName=Ameerpet, branchAddress=Ameerpet, emailId=vani@gmail.com, mobileNo=7896541765, isActive=Y, createdBy=1, updatedBy=1, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null), Branch(user=[com.resourcing.beans.User@3ed391fa], company=com.resourcing.beans.Company@2c003168, employeeObj=[], interviewPanel=[], branchId=85, branchName=Mumbai, branchAddress=Mumbai, emailId=mumbai@gmail.com, mobileNo=8521479635, isActive=Y, createdBy=1, updatedBy=0, latitude=17.56651515154, longitude=81.5465184785163, createdDate=null, updatedDate=null)] 
+2022-09-23 17:12:48:663  DEBUG  com.resourcing.controller.UserController  viewHomePages 225 branchNames[Ameerpet, Mumbai] 
+2022-09-23 17:27:24:341  DEBUG  com.resourcing.controller.UserController  UserLogout 464 entered into user/controller::::logged out 
+2022-09-23 17:27:27:488  DEBUG  com.resourcing.controller.UserController  employeeloginPage 100 entered into user/controller:::: login method 
+2022-09-23 17:27:34:499  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-23 17:27:34:500  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1663934247570 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1663934244304 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@40f7af80 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-23 17:27:34:555  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-23 17:27:34:679  DEBUG  com.resourcing.controller.UserController  validatemethod 138 user company Name::vedainfo 
+2022-09-23 17:27:41:341  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 172 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 17:27:41:344  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 174 id::::4 
+2022-09-23 17:27:41:344  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 175 userObj Id:::Srivani 
+2022-09-23 17:27:50:491  DEBUG  com.resourcing.controller.UserController  saveUserDetails 189  in update method employee created date::null 
+2022-09-23 17:27:50:491  DEBUG  com.resourcing.controller.UserController  saveUserDetails 190 in update method userObj:: name Srivani 
+2022-09-23 17:27:50:548  DEBUG  com.resourcing.controller.UserController  saveUserDetails 197 fields are updated sucessfully 
+2022-09-23 17:27:50:548  DEBUG  com.resourcing.controller.UserController  saveUserDetails 199 dashboard page is displayed 
+2022-09-23 17:27:52:869  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 172 entered into user/controller:::: dashboard setting page will display 
+2022-09-23 17:27:52:873  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 174 id::::4 
+2022-09-23 17:27:52:873  DEBUG  com.resourcing.controller.UserController  userDasboardSettingPage 175 userObj Id:::Srivani 
+2022-09-23 18:01:44:475  DEBUG  com.resourcing.controller.CandidateController  newCandidate 123 add candidate:::: 
+2022-09-23 18:01:44:477  DEBUG  com.resourcing.controller.CandidateController  newCandidate 127 url1::::::http://localhost:8080/candidate 
+2022-09-23 18:01:52:875  DEBUG  com.resourcing.controller.CandidateController  validatemail 147 http://localhost:8080/candidate/verification 
+2022-09-23 18:01:52:875  DEBUG  com.resourcing.controller.CandidateController  validatemail 150 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-23 18:01:52:875  DEBUG  com.resourcing.controller.CandidateController  validatemail 152 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-23 18:01:52:875  DEBUG  com.resourcing.controller.CandidateController  validatemail 154 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-23 18:01:52:875  DEBUG  com.resourcing.controller.CandidateController  validatemail 156 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-23 18:01:52:876  DEBUG  com.resourcing.controller.CandidateController  validatemail 159 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-23 18:19:31:285  DEBUG  com.resourcing.controller.CandidateController  validatemail 147 http://localhost:8080/candidate/verification 
+2022-09-23 18:19:31:287  DEBUG  com.resourcing.controller.CandidateController  validatemail 150 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-23 18:19:31:287  DEBUG  com.resourcing.controller.CandidateController  validatemail 152 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-23 18:19:31:287  DEBUG  com.resourcing.controller.CandidateController  validatemail 154 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-23 18:19:31:287  DEBUG  com.resourcing.controller.CandidateController  validatemail 156 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-23 18:19:31:287  DEBUG  com.resourcing.controller.CandidateController  validatemail 159 ::::::::::::::::: 6nullsaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-23 18:19:35:614  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-23 18:19:35:614  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-23 18:19:35:615  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-23 18:21:26:271  DEBUG  com.resourcing.controller.CandidateController  newCandidate 123 add candidate:::: 
+2022-09-23 18:21:26:272  DEBUG  com.resourcing.controller.CandidateController  newCandidate 127 url1::::::http://localhost:8080/candidate 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 147 http://localhost:8080/candidate/verification 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 150 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 152 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 154 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 156 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-23 18:21:32:378  DEBUG  com.resourcing.controller.CandidateController  validatemail 159 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-23 18:21:36:558  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-23 18:21:36:558  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-23 18:21:36:558  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-23 18:21:46:174  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 101 created date:::2022-09-23T18:21:46.174337700 
+2022-09-23 18:21:46:174  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 102 created_by:::5 
+2022-09-23 18:21:46:189  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 108 name of the first:::null 
+2022-09-23 18:23:51:386  DEBUG  com.resourcing.controller.JobDescriptionController  getJdListForUnknown 81 count:::0 
+2022-09-23 18:23:57:947  DEBUG  com.resourcing.controller.JobDescriptionController  getJdListForUnknown 81 count:::3 
+2022-09-23 18:23:57:948  DEBUG  com.resourcing.controller.JobDescriptionController  getJdListForUnknown 86 size::::10.0 
+2022-09-23 18:23:59:331  DEBUG  com.resourcing.controller.JobDescriptionController  getDetailedJd 116 entered into getHomePage::::Detailed JdPage 
+2022-09-24 11:47:41:399  DEBUG  com.resourcing.controller.CandidateController  newCandidate 130 add candidate:::: 
+2022-09-24 11:47:41:405  DEBUG  com.resourcing.controller.CandidateController  newCandidate 134 url1::::::http://localhost:8080/candidate 
+2022-09-24 11:47:47:574  DEBUG  com.resourcing.controller.CandidateController  validatemail 154 http://localhost:8080/candidate/verification;jsessionid=6F6218ED7F7D3A067EE5CBCE29211669 
+2022-09-24 11:47:47:575  DEBUG  com.resourcing.controller.CandidateController  validatemail 157 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-24 11:47:47:576  DEBUG  com.resourcing.controller.CandidateController  validatemail 159 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-24 11:47:47:576  DEBUG  com.resourcing.controller.CandidateController  validatemail 161 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-24 11:47:47:576  DEBUG  com.resourcing.controller.CandidateController  validatemail 163 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-24 11:47:47:577  DEBUG  com.resourcing.controller.CandidateController  validatemail 166 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-24 11:47:53:568  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-24 11:47:53:569  DEBUG  com.resourcing.controller.CandidateController  validatemail 172 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-24 11:47:53:569  DEBUG  com.resourcing.controller.CandidateController  validatemail 174 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-24 11:56:54:629  DEBUG  com.resourcing.controller.CandidateController  newCandidate 130 add candidate:::: 
+2022-09-24 11:56:54:630  DEBUG  com.resourcing.controller.CandidateController  newCandidate 134 url1::::::http://localhost:8080/candidate 
+2022-09-24 11:57:54:450  DEBUG  com.resourcing.controller.CandidateController  newCandidate 130 add candidate:::: 
+2022-09-24 11:57:54:452  DEBUG  com.resourcing.controller.CandidateController  newCandidate 134 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:00:57:175  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:00:57:177  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:04:58:914  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:04:58:914  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:05:11:618  DEBUG  com.resourcing.controller.CandidateController  validatemail 162 http://localhost:8080/candidate/verification 
+2022-09-24 12:05:11:618  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-24 12:05:11:618  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-24 12:05:11:618  DEBUG  com.resourcing.controller.CandidateController  validatemail 169 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-24 12:05:11:618  DEBUG  com.resourcing.controller.CandidateController  validatemail 171 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-24 12:05:11:620  DEBUG  com.resourcing.controller.CandidateController  validatemail 174 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-24 12:05:17:520  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-24 12:05:17:521  DEBUG  com.resourcing.controller.CandidateController  validatemail 180 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-24 12:05:17:521  DEBUG  com.resourcing.controller.CandidateController  validatemail 182 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-24 12:05:36:718  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 111 created date:::2022-09-24T12:05:36.717978300 
+2022-09-24 12:05:36:719  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 112 created_by:::6 
+2022-09-24 12:05:36:735  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 118 name of the first:::null 
+2022-09-24 12:24:23:096  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:24:23:098  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:24:51:150  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:24:51:151  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:28:41:371  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:28:41:376  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:29:22:144  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:29:22:146  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:29:30:052  DEBUG  com.resourcing.controller.CandidateController  validatemail 162 http://localhost:8080/candidate/verification 
+2022-09-24 12:29:30:053  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-24 12:29:30:054  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-24 12:29:30:054  DEBUG  com.resourcing.controller.CandidateController  validatemail 169 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-24 12:29:30:055  DEBUG  com.resourcing.controller.CandidateController  validatemail 171 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-24 12:29:30:055  DEBUG  com.resourcing.controller.CandidateController  validatemail 174 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-24 12:29:35:978  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-24 12:29:35:979  DEBUG  com.resourcing.controller.CandidateController  validatemail 180 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-24 12:29:35:980  DEBUG  com.resourcing.controller.CandidateController  validatemail 182 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-24 12:29:49:758  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 111 created date:::2022-09-24T12:29:49.758782600 
+2022-09-24 12:29:49:759  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 112 created_by:::7 
+2022-09-24 12:29:49:782  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 118 name of the first:::null 
+2022-09-24 12:36:42:821  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:36:42:826  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:36:53:104  DEBUG  com.resourcing.controller.CandidateController  validatemail 162 http://localhost:8080/candidate/verification 
+2022-09-24 12:36:53:104  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-24 12:36:53:105  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-24 12:36:53:105  DEBUG  com.resourcing.controller.CandidateController  validatemail 169 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-24 12:36:53:105  DEBUG  com.resourcing.controller.CandidateController  validatemail 171 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-24 12:36:53:105  DEBUG  com.resourcing.controller.CandidateController  validatemail 174 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-24 12:36:57:985  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-24 12:36:57:985  DEBUG  com.resourcing.controller.CandidateController  validatemail 180 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-24 12:36:57:985  DEBUG  com.resourcing.controller.CandidateController  validatemail 182 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-24 12:37:55:859  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 111 created date:::2022-09-24T12:37:55.859508400 
+2022-09-24 12:37:55:860  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 112 created_by:::8 
+2022-09-24 12:37:55:887  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 118 name of the first:::null 
+2022-09-24 12:40:38:868  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 249 getCaptcha:::::^d%C5W 
+2022-09-24 12:40:38:869  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 250 getUserCaptcha::::::^d%C5W 
+2022-09-24 12:40:38:916  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 258 email:::::gudimallapraveen33@gmail.com 
+2022-09-24 12:40:38:916  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 259 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-24 12:40:38:916  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 262 login successfully 
+2022-09-24 12:40:38:916  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 263 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-24 12:40:38:916  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 265 session created::::: 
+2022-09-24 12:40:38:917  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 267 session created::::::::::::::::::::::::::::::::: 
+2022-09-24 12:40:38:917  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 268 session working::::: 
+2022-09-24 12:40:38:917  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 269 objschedule:::::: 
+2022-09-24 12:47:44:651  DEBUG  com.resourcing.controller.CandidateController  updateCandidateDetails 201 is active status:::Y 
+2022-09-24 12:50:32:780  DEBUG  com.resourcing.controller.CandidateController  logout 378 session:::null 
+2022-09-24 12:50:38:118  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:50:38:119  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:50:52:242  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 12:50:52:243  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 12:50:58:145  DEBUG  com.resourcing.controller.CandidateController  validatemail 162 http://localhost:8080/candidate/verification 
+2022-09-24 12:50:58:146  DEBUG  com.resourcing.controller.CandidateController  validatemail 165 :::::::::::::::::2gudimallapraveen33@gmail.com 
+2022-09-24 12:50:58:146  DEBUG  com.resourcing.controller.CandidateController  validatemail 167 ::::::::::::::::: 3gudimallapraveen33@gmail.com 
+2022-09-24 12:50:58:146  DEBUG  com.resourcing.controller.CandidateController  validatemail 169 ::::::::::::::::: 4gudimallapraveen33@gmail.com 
+2022-09-24 12:50:58:146  DEBUG  com.resourcing.controller.CandidateController  validatemail 171 ::::::::::::::::: 5gudimallapraveen33@gmail.com 
+2022-09-24 12:50:58:147  DEBUG  com.resourcing.controller.CandidateController  validatemail 174 ::::::::::::::::: 6http://localhost:8080/candidatesaveCandidate?email=gudimallapraveen33@gmail.com&password=Praveen@123 
+2022-09-24 12:51:02:864  DEBUG  com.resourcing.service.CandidateServiceImpl  sendSimpleEmail 97 Mail Sent... 
+2022-09-24 12:51:02:865  DEBUG  com.resourcing.controller.CandidateController  validatemail 180 ::::::::::::::::: 7gudimallapraveen33@gmail.com 
+2022-09-24 12:51:02:865  DEBUG  com.resourcing.controller.CandidateController  validatemail 182 ::::::::::::::::: 8gudimallapraveen33@gmail.com 
+2022-09-24 12:51:12:620  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 111 created date:::2022-09-24T12:51:12.620543300 
+2022-09-24 12:51:12:620  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 112 created_by:::9 
+2022-09-24 12:51:12:632  DEBUG  com.resourcing.controller.CandidateController  saveCandidate 118 name of the first:::null 
+2022-09-24 12:51:23:277  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 250 getCaptcha:::::rk9Dbw 
+2022-09-24 12:51:23:278  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 251 getUserCaptcha::::::rk9Dbw 
+2022-09-24 12:51:23:281  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 259 email:::::gudimallapraveen33@gmail.com 
+2022-09-24 12:51:23:281  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 260 password:::::NdfKt4cw0zKInPHbvsY/0g== 
+2022-09-24 12:51:23:281  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 263 login successfully 
+2022-09-24 12:51:23:282  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 264 credential login user::::gudimallapraveen33@gmail.com 
+2022-09-24 12:51:23:282  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 266 session created::::: 
+2022-09-24 12:51:23:282  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 268 session created::::::::::::::::::::::::::::::::: 
+2022-09-24 12:51:23:282  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 269 session working::::: 
+2022-09-24 12:51:23:282  DEBUG  com.resourcing.controller.CandidateController  checkCredentials 270 objschedule:::::: 
+2022-09-24 12:52:06:143  DEBUG  com.resourcing.controller.CandidateController  updateCandidateDetails 201 is active status:::Y 
+2022-09-24 12:52:15:216  DEBUG  com.resourcing.controller.CandidateController  updateCandidateDetails 201 is active status:::Y 
+2022-09-24 12:52:18:779  DEBUG  com.resourcing.controller.CandidateController  updateCandidateDetails 201 is active status:::Y 
+2022-09-24 13:20:22:281  DEBUG  com.resourcing.controller.CandidateController  newCandidate 133 add candidate:::: 
+2022-09-24 13:20:22:285  DEBUG  com.resourcing.controller.CandidateController  newCandidate 137 url1::::::http://localhost:8080/candidate 
+2022-09-24 13:20:29:195  DEBUG  com.resourcing.controller.UserController  employeeloginPage 100 entered into user/controller:::: login method 
+2022-09-24 13:20:35:963  DEBUG  com.resourcing.controller.UserController  validatemethod 108 entered into validation method 
+2022-09-24 13:20:35:964  DEBUG  com.resourcing.controller.UserController  validatemethod 109 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:20:36:034  DEBUG  com.resourcing.controller.UserController  validatemethod 122 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-24 13:20:36:034  DEBUG  com.resourcing.controller.UserController  validatemethod 123 max time interval600 
+2022-09-24 13:20:36:034  DEBUG  com.resourcing.controller.UserController  validatemethod 124 last access time1664005829291 
+2022-09-24 13:20:36:035  DEBUG  com.resourcing.controller.UserController  validatemethod 125 creation time1664005822254 
+2022-09-24 13:20:36:035  DEBUG  com.resourcing.controller.UserController  validatemethod 126 attribute Namesjava.util.Collections$3@1e67be07 
+2022-09-24 13:20:36:035  DEBUG  com.resourcing.controller.UserController  validatemethod 127 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:20:36:035  DEBUG  com.resourcing.controller.UserController  validatemethod 128 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-24 13:20:36:035  DEBUG  com.resourcing.controller.UserController  validatemethod 130 dashboard page is displayed 
+2022-09-24 13:20:36:167  DEBUG  com.resourcing.controller.UserController  validatemethod 138 user company Name::vedainfo 
+2022-09-24 13:20:42:148  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 718 entered into user/controller::::add employee method 
+2022-09-24 13:20:42:153  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 720 entered into user/controller::::add employee for branch Id3 
+2022-09-24 13:21:24:136  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 743 add employee by user::::praveen12@gmail.com 
+2022-09-24 13:21:24:137  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 744 employee::branchId::3 
+2022-09-24 13:21:24:137  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 745 employee::branchName::Ameerpet 
+2022-09-24 13:21:24:139  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 755 mep pwd user::Praveen@123 
+2022-09-24 13:21:24:140  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 757 enPWD user::D/FS+w6FUfGJY7XXVo27Kw== 
+2022-09-24 13:34:12:649  DEBUG  com.resourcing.controller.UserController  validatemethod 112 entered into validation method 
+2022-09-24 13:34:12:650  DEBUG  com.resourcing.controller.UserController  validatemethod 113 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:34:12:806  DEBUG  com.resourcing.controller.UserController  validatemethod 126 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-24 13:34:12:806  DEBUG  com.resourcing.controller.UserController  validatemethod 127 max time interval600 
+2022-09-24 13:34:12:806  DEBUG  com.resourcing.controller.UserController  validatemethod 128 last access time1664006652628 
+2022-09-24 13:34:12:806  DEBUG  com.resourcing.controller.UserController  validatemethod 129 creation time1664006652628 
+2022-09-24 13:34:12:807  DEBUG  com.resourcing.controller.UserController  validatemethod 130 attribute Namesjava.util.Collections$3@14cbaa28 
+2022-09-24 13:34:12:807  DEBUG  com.resourcing.controller.UserController  validatemethod 131 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:34:12:807  DEBUG  com.resourcing.controller.UserController  validatemethod 132 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-24 13:34:12:807  DEBUG  com.resourcing.controller.UserController  validatemethod 134 dashboard page is displayed 
+2022-09-24 13:34:13:002  DEBUG  com.resourcing.controller.UserController  validatemethod 142 user company Name::vedainfo 
+2022-09-24 13:34:16:219  DEBUG  com.resourcing.controller.UserController  manageEmployeesPage 601 entered into user/controller::::  
+2022-09-24 13:38:51:557  DEBUG  com.resourcing.controller.UserController  manageEmployeesPage 601 entered into user/controller::::  
+2022-09-24 13:38:54:534  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 722 entered into user/controller::::add employee method 
+2022-09-24 13:38:54:536  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 724 entered into user/controller::::add employee for branch Id3 
+2022-09-24 13:39:23:445  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 747 add employee by user::::vikram@gmail.com 
+2022-09-24 13:39:23:446  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 748 employee::branchId::3 
+2022-09-24 13:39:23:446  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 749 employee::branchName::Ameerpet 
+2022-09-24 13:39:23:459  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 759 mep pwd user::Vikram@123 
+2022-09-24 13:39:23:459  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 761 enPWD user::sVZ5Q7mxdFsEjqo1tDI6Ew== 
+2022-09-24 13:44:39:302  DEBUG  com.resourcing.controller.UserController  validatemethod 112 entered into validation method 
+2022-09-24 13:44:39:304  DEBUG  com.resourcing.controller.UserController  validatemethod 113 Before::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:44:39:468  DEBUG  com.resourcing.controller.UserController  validatemethod 126 nameclass org.apache.catalina.session.StandardSessionFacade 
+2022-09-24 13:44:39:469  DEBUG  com.resourcing.controller.UserController  validatemethod 127 max time interval600 
+2022-09-24 13:44:39:469  DEBUG  com.resourcing.controller.UserController  validatemethod 128 last access time1664007277347 
+2022-09-24 13:44:39:469  DEBUG  com.resourcing.controller.UserController  validatemethod 129 creation time1664006652628 
+2022-09-24 13:44:39:470  DEBUG  com.resourcing.controller.UserController  validatemethod 130 attribute Namesjava.util.Collections$3@56fa05cc 
+2022-09-24 13:44:39:470  DEBUG  com.resourcing.controller.UserController  validatemethod 131 after:::controller validation method user mail id  is:vani@gmail.com 
+2022-09-24 13:44:39:470  DEBUG  com.resourcing.controller.UserController  validatemethod 132 controller validation method user password id  is:DCt4f6rGnsQyU1NCXUSW4A== 
+2022-09-24 13:44:39:470  DEBUG  com.resourcing.controller.UserController  validatemethod 134 dashboard page is displayed 
+2022-09-24 13:44:39:653  DEBUG  com.resourcing.controller.UserController  validatemethod 142 user company Name::vedainfo 
+2022-09-24 13:44:41:686  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 720 entered into user/controller::::add employee method 
+2022-09-24 13:44:41:690  DEBUG  com.resourcing.controller.UserController  employeeRegisterPage 722 entered into user/controller::::add employee for branch Id3 
+2022-09-24 13:45:02:716  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 745 add employee by user::::test@gmail.com 
+2022-09-24 13:45:02:716  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 746 employee::branchId::3 
+2022-09-24 13:45:02:716  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 747 employee::branchName::Ameerpet 
+2022-09-24 13:45:02:722  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 757 mep pwd user::Test@123 
+2022-09-24 13:45:02:724  DEBUG  com.resourcing.controller.UserController  addNewEmployeeinDB 759 enPWD user::+ti22CitO8d/JCUyoLm/+g== 
+2022-09-24 13:45:27:249  DEBUG  com.resourcing.controller.UserController  getAssignedCanididateListOfEmployee 584 entered into user/controller::::  
+2022-09-24 13:45:35:291  DEBUG  com.resourcing.controller.UserController  manageEmployeesPage 601 entered into user/controller::::  
+2022-09-24 13:45:38:373  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 687 employee active status is::Y 
+2022-09-24 13:45:38:379  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 693 employee deleted sucessfully::97 
+2022-09-24 13:45:40:793  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 676 employee deleted sucessfully::97 
+2022-09-24 13:45:55:957  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 687 employee active status is::Y 
+2022-09-24 13:45:55:960  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 693 employee deleted sucessfully::97 
+2022-09-24 13:46:04:908  DEBUG  com.resourcing.controller.UserController  saveEmployeeAfterUpdate 676 employee deleted sucessfully::97 
+2022-09-24 13:49:32:265  DEBUG  com.resourcing.controller.CandidateController  logout 378 session:::null 
+2022-09-24 17:37:59:290  DEBUG  com.resourcing.controller.AdminUserController  adminLoginPage 166 entered into user/controller:::: login method 
+2022-09-24 17:38:08:397  DEBUG  com.resourcing.controller.AdminUserController  validatemethod 174 entered into validation method 
+2022-09-24 17:38:08:695  INFO   com.resourcing.controller.AdminUserController  validatemethod 194 admin dashboard  page is displayed 
+2022-09-24 17:39:06:911  DEBUG  com.resourcing.controller.AdminUserController  getAllEmployees 508 inside getAllEmployees this will get the all employees::: 
+2022-09-24 17:39:33:564  DEBUG  com.resourcing.controller.AdminUserController  getAllCandidates 497 inside getAllCandidates this will get the all Candidates::: 
+2022-09-24 17:39:37:101  DEBUG  com.resourcing.controller.AdminUserController  getAllEmployees 508 inside getAllEmployees this will get the all employees::: 

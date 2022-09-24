@@ -1,5 +1,5 @@
 <!-- /*  -->
-<!--  * Author : Srivani Tudi */ -->
+<!--  * @Author : Srivani Tudi */ -->
 
 
 <!doctype html>
@@ -18,6 +18,30 @@
 <link rel="stylesheet" href="../../css/colors/blue.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'
 	crossorigin='anonymous'></script>
+	<style>
+	.blink {
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+
+}
+
+@keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+@-webkit-keyframes blink-animation {to { visibility:hidden;
+	
+}
+
+}
+
+	</style>
 
 
 
@@ -28,8 +52,8 @@
 	/*this centers the text horizontally*/ justify-content: center;
 	/*this centers the text vertically*/ align-items: center; height: 200px; color: #fff; font-size: xx-large; font-weight: bold; background-color: aqua;"><a
 		th:href="@{/emp/login}"
-		style="color: red; font: 200; content: bold; align-self: center;">Session
-			Expired! Please LOG IN</a></span>
+		style="color: red; font: 500%;  content: bold; align-self: center;  background-color: yellow ; font-family: serif; font-stretch: ultra-expanded; " class="blink"> Please LOG IN</a></span>
+	
 	<span th:if="${session.employeeObj!=null}"> <!-- Wrapper -->
 		<div id="wrapper">
 
@@ -112,12 +136,12 @@
 								<div class="header-notifications user-menu">
 									<div class="header-notifications-trigger">
 										<a href="#"><div class="user-avatar status-online">
-												<img
+												<img th:if="${session.employeeObj.image==null}"
 													class="profile-pic"
-													src="/../../images/user-avatar-small-01.jpg"/>
-<!-- 													<span th:if="${session.employeeObj.image!=null}"><img -->
-<!-- 													th:src="${'data:image/jpeg;base64,'+{session.employeeObj.image}}" class="profile-pic" -->
-<!-- 													style="width: 150px; height: 70px;"></span> -->
+													src="/../../images/user-avatar-small-01.jpg" /> <img
+													th:unless="${session.employeeObj.image==null}"
+													th:src="${'data:image/jpeg;base64,'+{session.employeeObj.image}}"
+													class="profile-pic" style="width: 150px; height: 60px;">
 											</div></a>
 									</div>
 									<!-- Dropdown -->
@@ -127,13 +151,22 @@
 											<!-- User Name / Avatar -->
 											<div class="user-details">
 												<div class="user-avatar status-online">
-													<img src="/../../images/user-avatar-small-01.jpg" alt="">
+													<img th:if="${session.employeeObj.image==null}"
+														class="profile-pic"
+														src="/../../images/user-avatar-small-01.jpg" /> <img
+														th:unless="${session.employeeObj.image==null}"
+														th:src="${'data:image/jpeg;base64,'+{session.employeeObj.image}}"
+														class="profile-pic" style="width: 150px; height: 60px;">
 												</div>
 												<div class="user-name">
 													<h3 style="color: maroon"
 														th:text="${session.employeeObj.employeeName}"></h3>
 													<h4 style="color: green"
 														th:text="${session.employeeObj.employeeRole}"></h4>
+													<h4 style="color: maroon"
+														th:text="${session.employeeObj.branch.branchName}"></h4>
+													<h4 style="color: maroon"
+														th:text="${session.employeeObj.branch.company.companyName}"></h4>
 												</div>
 												<!-- User Status Switcher -->
 											</div>

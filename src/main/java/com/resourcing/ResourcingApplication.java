@@ -66,7 +66,7 @@ public class ResourcingApplication extends SpringBootServletInitializer {
 		model.addAttribute("candidateList", candidateList.size());
 		model.addAttribute("clientList", clientList.size());
 		model.addAttribute("objJd", jobDescription);
-		return "homepage_test";
+		return "homepage";
 	}
 
 	

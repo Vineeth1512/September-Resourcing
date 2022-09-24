@@ -65,24 +65,30 @@
 					<div class="right-side">
 
 						<div class="header-widget">
-							<!-- 					<a href="#sign-in-dialog" class="popup-with-zoom-anim log-in-button"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
- -->
 
 							<nav id="navigation">
 								<ul id="responsive">
-									<li><a href="#"><i class="icon-feather-log-in"></i> <span>Log
-												In / Register</span></a>
+									<li><a href="#"><span th:text="#{label.lang.en}"></span></a>
 										<ul class="dropdown-nav">
-											<li><a th:href="@{/admin/login}">Admin Login</a></li>
-											<li><a th:href="@{/user/login}">User Login</a></li>
-
-											<li><a th:href="@{/emp/login}">Employee Login</a></li>
-											<li><a th:href="@{/login}">Interviewer Login</a></li>
-											<li><a th:href="@{/client/login}">Client Login</a></li>
-											<li><a th:href="@{/candidate/login}">Candidate Login</a></li>
-
-
+											<li><a href="/?language=en"><span th:text="#{label.lang.en}"></span></a></li>
+											<li><a href="/?language=te"><span th:text="#{label.lang.te}"></span></a></li>
 										</ul></li>
+								</ul>
+							</nav>
+							
+							
+							<nav id="navigation">
+								<ul id="responsive">
+									<li><a href="#"><i class="icon-feather-log-in"></i> <span th:text="#{label.homepage.log/reg}"></span></a>
+										<ul class="dropdown-nav">
+											<li><a th:href="@{/admin/login}"><span th:text="#{label.homepage.admin}"></span></a></li>
+											<li><a th:href="@{/user/login}"><span th:text="#{label.homepage.user}"></span></a></li>
+											<li><a th:href="@{/emp/login}"><span th:text="#{label.homepage.emp}"></span></a></li>
+											<li><a th:href="@{/login}"><span th:text="#{label.homepage.inter}"></span></a></li>
+											<li><a th:href="@{/client/login}"><span th:text="#{label.homepage.client}"></span></a></li>
+											<li><a th:href="@{/candidate/login}"><span th:text="#{label.homepage.cand}"></span></a></li>
+										</ul>
+									</li>
 
 								</ul>
 
@@ -123,14 +129,14 @@
 				<!-- Intro Headline -->
 				<div class="row">
 					<div class="col-md-12">
-						<div class="banner-headline">
+						<div>
 							<h3>
-								<strong>Hire experts or be hired for any job, any time.</strong>
-								<br> <span>Thousands of small businesses use <strong
-									class="color">360Resourcing</strong> to turn their ideas into reality.
-								</span>
-								<h3><a class="nav-link" href="/?lang=en">English</a></h3>
-								<a class="nav-link" href="/?lang=fr">France</a>
+								<strong th:text="#{label.homepage.first}"></strong>
+								 <span th:text="#{label.homepage.span}"></span><br>
+								<strong style="color: blue" th:text="#{label.homepage.resourcing}"></strong>
+									<span th:text="#{lable.homepage.strong}"></span>
+								<!-- </span> -->
+								
 							</h3>
 						</div>
 					</div>
@@ -150,18 +156,18 @@
 
 								<!-- Search Field of skills -->
 								<div class="intro-search-field">
-									<label for="intro-keywords" class="field-title ripple-effect">Skills</label>
+									<label for="intro-keywords" class="field-title ripple-effect" th:text="#{label.homepage.skills}"></label>
 									 <input id="intro-keywords" type="text"
 										name="skills" th:field="*{skills}"
-										placeholder="eg. Java, Spring Boot, Python etc" required="required">
+										th:placeholder="#{label.homepage.placeholder}" required="required">
 								</div>
 
 								<!-- Search Field of Experiemce in yrs-->
 								<div class="intro-search-field">
-									<label for="intro-keywords" class="field-title ripple-effect">Experience in yrs</label>
+									<label for="intro-keywords" class="field-title ripple-effect" th:text="#{label.homepage.exp}"></label>
 									 <input id="intro-keywords" type="text"
 										name="exp" th:field="*{exp}"
-										placeholder="eg. 1, 2.5, 3 etc" required="required">
+										th:placeholder="#{label.homepage.yrs}" required="required">
 								</div>
 
 								<!-- Button -->
@@ -170,7 +176,7 @@
 		th:onclick="'window.location.href = \'' + @{/deviceevent/list/{id}(id=${deviceEvent.id})} + '\''"
 		
 		-->
-									<button class="button ripple-effect" type="submit">Search</button>
+									<button class="button ripple-effect" type="submit" th:text="#{label.homepage.search}"></button>
 
 									<!-- 													<a th:href="@{/resourcing}" class="apply-now-button popup-with-zoom-anim">Apply Now <i class="icon-material-outline-arrow-right-alt"></i></a> -->
 
@@ -186,15 +192,14 @@
 					<div class="col-md-12">
 						<ul class="intro-stats margin-top-45 hide-under-992px">
 							<li>
-								<h4 th:text="${jdList}"></h4> <span>Jobs Posted</span>
+								<h4 th:text="${jdList}"></h4> <span th:text="#{label.homepage.jobs}"></span>
 							</li>
 							<li>
 
-								<h4 th:text="${candidateList}"></h4> <span>Candidates Registered</span>
+								<h4 th:text="${candidateList}"></h4> <span th:text="#{label.homepage.candidates}"></span>
 							</li>
 							<li>
-								<h4 th:text="${clientList}"></h4> <span>Clients
-									Registered</span>
+								<h4 th:text="${clientList}"></h4> <span th:text="#{label.homepage.clients}"></span>
 							</li>
 						</ul>
 					</div>
@@ -212,7 +217,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-12">
-							© 2022 <strong>360Resourcing</strong>. All Rights Reserved.
+							 <strong th:text="#{label.homepage.bottom}"></strong>
 						</div>
 					</div>
 				</div>

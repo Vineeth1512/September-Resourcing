@@ -89,7 +89,7 @@ public class CandidateServiceImpl implements CandidateService {
 	@Override
 	public String sendSimpleEmail(String toEmail, String body, String subject) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("t.srivani488@gmail.com");
+		message.setFrom("resourcingproject360@gmail.com");
 		message.setTo(toEmail);
 		message.setText(body);
 		message.setSubject(subject);

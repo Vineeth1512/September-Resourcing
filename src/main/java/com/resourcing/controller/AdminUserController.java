@@ -459,8 +459,7 @@ public class AdminUserController {
 			objUserActive.setUpdatedDate(LocalDateTime.now());
 			branchService.updateBranch(objUserActive);
 			List<Branch> branch = branchService.getAllBranchs();
-			List<Branch> branchs = branch.stream()
-					.filter(obj -> obj.getCompany().getCompanyId() == objUserActive.getCompany().getCompanyId())
+			List<Branch> branchs = branch.stream().filter(obj -> obj.getCompany().getCompanyId() == objUserActive.getCompany().getCompanyId())
 					.collect(Collectors.toList());
 			model.addAttribute("listBranches", branchs);
 			model.addAttribute("message", objUserActive.getBranchName() + " is changed to Active ");

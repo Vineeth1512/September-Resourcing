@@ -160,7 +160,7 @@ form i {
 						</div>
 
 						<!-- Form -->
-						<form action="post" th:action="@{/candidate/verification}"
+						<form action="post" th:action="@{/candidate/verification}" enctype="multipart/form-data"
 							th:object="${candidate}" method="post" id="login-form">
 
 
@@ -174,7 +174,7 @@ form i {
 									and then (dot) like '.' After the (dot) like. sign, add at least 2 letters from a to z:"
 									required />
 							</div>
-
+						
 							<div class="input-with-icon-left">
 								<i class="bi bi-eye-slash" id="togglePassword"></i> <input
 									type="password" class="input-text with-border" name="password"
@@ -182,7 +182,9 @@ form i {
 									pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 									title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 									required />
+									<input type="hidden" class="form-control form-control-lg" id="contentToGenerate" name="contentToGenerate" required>
 							</div>
+							
 
 <!-- 							<div class="input-with-icon-left" col-xl-6> -->
 <!-- 								<div class="submit-field"> -->

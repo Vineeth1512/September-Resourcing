@@ -294,11 +294,24 @@
 															th:src="*{'data:image/jpeg;base64,'+{candidate.image}}"
 															style="width: 150px; height: 150px;"></th>
 													</div>
-
+													<span th:if="${candidate.image==null}"><img class="profile-pic" src="images/user-avatar-placeholder.png" alt="" /></span>
 													<div class="upload-button"></div>
 													<input class="file-upload" type="file"
 														accept="image/png,image/jpg,image/jpeg" id="image"
 														name="file" />
+												</div>
+											</div>
+											
+											<div class="col-auto">
+											QR Code
+												<div  data-tippy-placement="bottom">
+													<div>
+														<th scope="row"><img alt=" "
+															th:src="*{'data:qrCode/jpeg;base64,'+{candidate.qrCode}}"
+															style="width: 150px; height: 150px;"></th>
+													</div>
+
+													
 												</div>
 											</div>
 

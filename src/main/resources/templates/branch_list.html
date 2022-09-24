@@ -139,7 +139,7 @@
 										</div>
 
 
-										
+
 										<!--  
 											
 								 -->
@@ -229,177 +229,193 @@
 			<div class="dashboard-content-container" data-simplebar>
 				<div class="dashboard-content-inner">
 
-					<div>
-						<h3>
-							<b><span style="color: green" th:text="${message}"></span></b>
-						</h3>
-
-						<h3>
-							<b><span style="color: red" th:text="${red}"></span></b>
-						</h3>
-
-					</div>
-
-
 					<!-- Dashboard Headline -->
 					<div class="container">
+
 						<div class="row">
 
-							<div class="col-xl-6 col-md-6">
+							<!-- Dashboard Box -->
+							<div class="col-xl-12">
+								<div id="print">
+									<div class="dashboard-box margin-top-0">
 
-								<div class="section-headline margin-bottom-30"></div>
-								<table class="basic-table" id="example">
+										<!-- Headline -->
+										<div class="headline">
+											<h3>
+												<i class="icon-material-outline-business-center"></i><span
+													style="color: blue" th:text="${TableName}"></span> <b>
 
-									<thead>
-										<tr>
-											<th>Branch Name</th>
-											<th>Branch Address</th>
-											<th>Branch Email</th>
-											<th>Mobile Number</th>
-											<th>Company Name</th>
-											<th>ActiveStatus</th>
-											<th>Actions</th>
-											<th>About Admin</th>
-		
+													<span style="color: green" th:text="${message}"></span> <span
+													style="color: red" th:text="${red}"></span>
+												</b>
+
+											</h3>
+										</div>
+
+										<!--=========== for search bar -->
+										<input id="searchbar" onkeyup="search_data()" type="text"
+											name="search" placeholder="Search here">
+										<!--============ for search bar -->
+
+										<div class="content" th:each="obj:${listBranches}">
+											<ul class="dashboard-box-list" id="list">
+												<li class="data">
+													<!-- Job Listing -->
+													<div class="job-listing">
+
+														<!-- Job Listing Details -->
+														<div class="job-listing-details">
+
+															<!-- Details -->
+															<div class="job-listing-description">
+
+																<i class="icon-line-awesome-institution"></i> Branch
+																Name :
+																<h3 th:text="${obj.branchName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+																<i class="icon-material-outline-home"></i> Branch
+																Address :
+																<h3 th:text="${obj.branchAddress}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+																<i class="icon-line-awesome-institution"></i> Company
+																Name :
+																<h3 th:text="${obj.company.companyName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
 
 
-										</tr>
-									</thead>
-									<tbody>
-
-										<tr th:each="Branch : ${listBranches}">
-											<td th:text="${Branch.branchName}"></td>
-											<td th:text="${Branch.branchAddress}"></td>
-											<td th:text="${Branch.emailId}"></td>
-											<td th:text="${Branch.mobileNo}"></td>
-											<td th:text="${Branch.company.companyName}"></td>
-											<td th:value="${Branch.isActive}"><span
-												th:if="${Branch.isActive=='Y'}"><i
-													class='fas fa-user-alt'
-													style='font-size: 30px; color: green;'></i></span> <span
-												th:if="${Branch.isActive=='N'}"><i
-													class='fas fa-user-alt-slash'
-													style='font-size: 30px; color: red'></i></span></td>
-											<td><a
-												th:href="@{/admin/showNewBranchFormForUpdate/{id}(id=${Branch.branchId})}"
-												title="Edit" data-tippy-placement="top"><i
-													class="icon-feather-edit"></i></a> <a
-												th:href="@{/admin/activeBranch/{id}(id=${Branch.branchId})}"
-												title="Activate/inActivate" data-tippy-placement="top"
-												style="text-decoration: underline;"> changeActiveStatus</a>
-											</td>
+																<i class="icon-material-baseline-mail-outline"></i>
+																Email : <span class="dashboard-status-button green"
+																	th:text="${obj.emailId}" style="color: rgb();"></span>
 
 
-
-											<td><ul class="pm">
-													<li><a href="#" title="#">Select</a>
-														<ul class="cm">
-															<li><a
-																th:href="@{/admin/register/{id}(id=${Branch.branchId})}"
-																class="btn btn-primary btn-sm mb-3">Add Admin</a></li>
-															<li><a
-																th:href="@{/admin/usersList/{branchId}(branchId=${Branch.branchId})}"
-																class="btn btn-primary btn-sm mb-3"> Admin Details</a></li>
-														</ul></li>
-												</ul></td>
-
-											<!-- td><ul class="pm">
-													<li><a href="#" title="#">Select</a>
-														<ul class="cm">
-															<li><a
-																th:href="@{/admin/clientregister/{branchId}(branchId=${Branch.branchId})}"
-																class="btn btn-primary btn-sm mb-3">Add Client</a></li>
-															<li><a
-																th:href="@{/admin/clientList/{branchId}(branchId=${Branch.branchId})}"
-																class="btn btn-primary btn-sm mb-3"> Client List</a></li>
-														</ul></li>
-												</ul></td> -->
+																<!-- Job Listing Footer -->
+																<div class="job-listing-footer">
+																	<ul>
+																		<li><i class="icon-feather-phone"></i> Mobile
+																			Number : <span class="dashboard-status-button green"
+																			th:text="${obj.mobileNo}" style="color: rgb();"></span></li>
 
 
 
+																		<li><i class="icon-material-outline-date-range"></i>
+																			IsActive : <span th:text="${obj.isActive}"
+																			th:if="${obj.isActive=='Y'}"><i
+																				class='fas fa-user-alt'
+																				style='font-size: 30px; color: green;'></i></span> <span
+																			th:if="${obj.isActive=='N'}"><i
+																				class='fas fa-user-alt-slash'
+																				style='font-size: 30px; color: red'></i></span></li>
 
 
+																	</ul>
+																	<ul class="pm">
+																		<li><a style="color: orange; size: 20px;"
+																			class="dashboard-status-button yellow" href="#"
+																			title="#">Select</a>
+																			<ul class="cm">
+																				<li><a
+																					th:href="@{/admin/showNewBranchFormForUpdate/{id}(id=${obj.branchId})}"
+																					class="btn btn-primary btn-sm mb-3">Update
+																						Branch</a></li>
+																				<li><a
+																					th:href="@{/admin/activeBranch/{id}(id=${obj.branchId})}"
+																					title="Activate/inActivate"
+																					data-tippy-placement="top"
+																					style="text-decoration: underline;">
+																						changeActiveStatus</a></li>
+
+																				<li><a
+																					th:href="@{/admin/register/{id}(id=${obj.branchId})}"
+																					class="btn btn-primary btn-sm mb-3">Add Admin</a></li>
+																				<li><a
+																					th:href="@{/admin/usersList/{branchId}(branchId=${obj.branchId})}"
+																					class="btn btn-primary btn-sm mb-3"> Admin
+																						Details</a></li>
+
+																			</ul></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div> <!--  Buttons -->
 
 
+												</li>
 
 
-											<!-- <td><a
-												th:href="@{/admin/register/{id}(id=${Branch.branchId})}"
-												class="btn btn-primary btn-sm mb-3">Add Branch Admin</a></td>
-												
-												<td><a
-												th:href="@{/admin/usersList/{branchId}(branchId=${Branch.branchId})}"
-												class="btn btn-primary btn-sm mb-3">  Admin Details</a></td> -->
-											<!-- <td><a
-												th:href="@{/admin/clientregister/{branchId}(branchId=${Branch.branchId})}"
-												class="btn btn-primary btn-sm mb-3">Add Client</a></td>
-											<td><a
-												th:href="@{/admin/clientList/{branchId}(branchId=${Branch.branchId})}"
-												class="btn btn-primary btn-sm mb-3"> Branch Client List</a></td>
- -->
-										</tr>
-									</tbody>
-								</table>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="margin-top-70"></div>
+								<!-- Spacer / End-->
+
+								<button class="button ripple-effect"
+									onclick="printContent('print')">Download</button>
+
+
 							</div>
-						</div>
-					</div>
-					<!-- Row / End -->
 
-					<!-- Footer -->
-					<div class="dashboard-footer-spacer"></div>
-					<div class="small-footer margin-top-15">
-						<div class="small-footer-copyrights">
-							© 2019 <strong>360Resourcing</strong>. All Rights Reserved.
 						</div>
-						<!-- 	<ul class="footer-social-links">
-							<li><a href="#" title="Facebook" data-tippy-placement="top">
-									<i class="icon-brand-facebook-f"></i>
-							</a></li>
-							<li><a href="#" title="Twitter" data-tippy-placement="top">
-									<i class="icon-brand-twitter"></i>
-							</a></li>
-							<li><a href="#" title="Google Plus"
-								data-tippy-placement="top"> <i
-									class="icon-brand-google-plus-g"></i>
-							</a></li>
-							<li><a href="#" title="LinkedIn" data-tippy-placement="top">
-									<i class="icon-brand-linkedin-in"></i>
-							</a></li>
-						</ul> -->
-						<div class="clearfix"></div>
-					</div>
-					<!-- Footer / End -->
 
+
+
+
+					</div>
 				</div>
+				<!-- Row / End -->
+
+				<!-- Footer -->
+				<div class="dashboard-footer-spacer"></div>
+				<div class="small-footer margin-top-15">
+					<div class="small-footer-copyrights">
+						© 2019 <strong>360Resourcing</strong>. All Rights Reserved.
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+				<!-- Footer / End -->
+
 			</div>
-			<!-- Dashboard Content / End -->
-
 		</div>
-		<!-- Dashboard Container / End -->
-		<!-- Wrapper / End -->
+		<!-- Dashboard Content / End -->
+
+	</div>
+	<!-- Dashboard Container / End -->
+	<!-- Wrapper / End -->
 
 
-		<!-- Scripts
+	<!-- Scripts
 ================================================== -->
-		<script src="../../../js/jquery-3.6.0.min.js"></script>
-		<script src="../../../js/jquery-migrate-3.3.2.min.js"></script>
-		<script src="../../../js/mmenu.min.js"></script>
-		<script src="../../../js/tippy.all.min.js"></script>
-		<script src="../../../js/simplebar.min.js"></script>
-		<script src="../../../js/bootstrap-slider.min.js"></script>
-		<script src="../../../js/bootstrap-select.min.js"></script>
-		<script src="../../../js/snackbar.js"></script>
-		<script src="../../../js/clipboard.min.js"></script>
-		<script src="../../../js/counterup.min.js"></script>
-		<script src="../../../js/magnific-popup.min.js"></script>
-		<script src="../../../js/slick.min.js"></script>
-		<script src="../../../js/custom.js"></script>
-		<script src="../../../js/strongPassword.js"></script>
-		<script src="../../../js/isActiveButton.js"></script>
-		<script src="../../js/educationListDropDown.js"></script>
+	<script src="../../../js/jquery-3.6.0.min.js"></script>
+	<script src="../../../js/jquery-migrate-3.3.2.min.js"></script>
+	<script src="../../../js/mmenu.min.js"></script>
+	<script src="../../../js/tippy.all.min.js"></script>
+	<script src="../../../js/simplebar.min.js"></script>
+	<script src="../../../js/bootstrap-slider.min.js"></script>
+	<script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/snackbar.js"></script>
+	<script src="../../../js/clipboard.min.js"></script>
+	<script src="../../../js/counterup.min.js"></script>
+	<script src="../../../js/magnific-popup.min.js"></script>
+	<script src="../../../js/slick.min.js"></script>
+	<script src="../../../js/custom.js"></script>
+	<script src="../../../js/strongPassword.js"></script>
+	<script src="../../../js/isActiveButton.js"></script>
+	<script src="../../js/educationListDropDown.js"></script>
+	<script src="../../../js/print.js"></script>
+	<script src="../../../js/search_bar.js"></script>
 
-		<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
-		<script>
+
+	<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+	<script>
 			// Snackbar for user status switcher
 			$('#snackbar-user-status label').click(function() {
 				Snackbar.show({
@@ -414,9 +430,9 @@
 			});
 		</script>
 
-		<!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
-		<script src="../js/chart.min.js"></script>
-		<script>
+	<!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
+	<script src="../js/chart.min.js"></script>
+	<script>
 			Chart.defaults.global.defaultFontFamily = "Nunito";
 			Chart.defaults.global.defaultFontColor = '#888';
 			Chart.defaults.global.defaultFontSize = '14';
@@ -498,8 +514,8 @@
 		</script>
 
 
-		<!-- Google Autocomplete -->
-		<script>
+	<!-- Google Autocomplete -->
+	<script>
 			function initAutocomplete() {
 				var options = {
 					types : [ '(cities)' ],
@@ -520,7 +536,7 @@
 		</script>
 
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 			function Buttontoggle() {
 				var t = document.getElementById("isActive");
 				if (t.value == "Y") {
@@ -530,24 +546,24 @@
 				}
 			}
 		</script>
-		<!-- Google API -->
-		<script
-			src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initAutocomplete"></script>
+	<!-- Google API -->
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initAutocomplete"></script>
 
-		<!-- 			for search bar ================-->
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
-		<script>
+	<!-- 			for search bar ================-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script>
 			$(document).ready(function() {
 				var table = $('#example').DataTable({
 					"sAjaxDataProp" : ""
 				})
 			});
 		</script>
-		<!--This has to be placed in Scripts part which presents bottom part of html-->
-		<!-- 			for search bar ================-->
+	<!--This has to be placed in Scripts part which presents bottom part of html-->
+	<!-- 			for search bar ================-->
 </body>
 </html>

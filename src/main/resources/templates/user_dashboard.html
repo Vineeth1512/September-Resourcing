@@ -67,8 +67,7 @@
 									<ul class="dropdown-nav">
 										<li><a th:href="@{/user/allemployeesList}">Employees
 												List</a></li>
-										<li><a th:href="@{/user/employeesList/recruiters}">Recruiters
-												List</a></li>
+									
 										<li><a th:href="@{/user/employeesList/interviewers}">Interviewers
 												List</a></li>
 									</ul></li>
@@ -257,7 +256,7 @@
 								<i class="icon-material-outline-gavel"></i>
 							</div>
 						</div>
-						<div class="fun-fact" data-fun-fact-color="#b81b7f">
+						<!-- <div class="fun-fact" data-fun-fact-color="#b81b7f">
 							<div class="fun-fact-text">
 								<span>Jobs</span>
 								<h4>
@@ -267,7 +266,7 @@
 							<div class="fun-fact-icon">
 								<i class="icon-material-outline-business-center"></i>
 							</div>
-						</div>
+						</div> -->
 						<div class="fun-fact" data-fun-fact-color="#efa80f">
 							<div class="fun-fact-text">
 								<a
@@ -285,9 +284,11 @@
 						<!-- Last one has to be hidden below 1600px, sorry :( -->
 						<div class="fun-fact" data-fun-fact-color="#2a41e6">
 							<div class="fun-fact-text">
-								<span>SelectedCandidates</span>
+								<a
+											th:href="@{/user/allemployeesList}"
+											class="btn btn-primary btn-sm mb-3"> Employees</a>
 								<h4>
-									<span th:text="${slectedCandidatesCount}"></span>
+									<span th:text="${employeesCount}"></span>
 								</h4>
 							</div>
 							<div class="fun-fact-icon">

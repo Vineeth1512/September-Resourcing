@@ -437,7 +437,7 @@ public class ScheduleController {
 		mailMessage.setCc(schedules.getInterviewPanel().getInterviewerMail(), schedules.getEmployee().getEmailId()); //
 		mailMessage.setTo(schedules.getCandidate().getEmail());
 		mailMessage.setSubject("360Resourcing-Interview Schedule!");
-		mailMessage.setFrom("t.srivani488@gmail.com");
+		mailMessage.setFrom("resourcingproject360@gmail.com");
 		mailMessage.setText("Your Interview is Scheduled  " + "Timings:" + schedules.getDate() + ", "
 				+ schedules.getTime() + " please click here : " + schedules.getMeetingLink());
 		emailSenderService.sendEmail(mailMessage);

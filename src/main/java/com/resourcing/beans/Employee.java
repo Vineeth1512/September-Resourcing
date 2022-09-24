@@ -90,5 +90,7 @@ public class Employee {
 	@Column(name = "image")
 	private String image;
 
+	@Column(name="barCode")
+	private String barCode;
 
 }
