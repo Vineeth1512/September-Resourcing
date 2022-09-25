@@ -33,7 +33,7 @@ public class Branch {
 	@JoinColumn(name = "company_id") // Adding the name to column
 	private Company company;
 
-	// linking oneBranchDetails to Many Recruiters....
+	// linking oneBranchDetails to Many Recruiters..
 	@OneToMany(cascade = CascadeType.ALL)
 	private Set<Employee> employeeObj;
 
