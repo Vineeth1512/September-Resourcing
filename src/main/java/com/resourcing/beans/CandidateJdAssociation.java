@@ -39,13 +39,13 @@ public class CandidateJdAssociation {
 	private JobDescription jobDescription;
 
 	@Column(name = "is_active")
-	private Character isActive;
+	private Character isActive = 'Y';
 
 	@Column(name = "created_by")
 	private int createdBy;
 
 	@Column(name = "created_date")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@Column(name = "updated_date")
 	private LocalDateTime updatedDate;

@@ -56,13 +56,13 @@ public class Education {
 	private float percentage;
 
 	@Column(name = "isActive")
-	private Character isActive;
+	private Character isActive ='Y';
 
 	@Column(name = "createdBy")
 	private int createdBy;
 
 	@Column(name = "createdDate")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@Column(name = "updatedBy")
 	private int updatedBy;

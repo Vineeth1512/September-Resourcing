@@ -73,7 +73,7 @@ public class Branch {
 	private double longitude;
 
 	@Column(name = "createdDate", insertable = false, updatable = false)
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	private LocalDateTime updatedDate;
 

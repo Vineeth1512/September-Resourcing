@@ -59,8 +59,8 @@ public class EmploymentController {
 		public String saveEmployment(Employment employment,Model model,RedirectAttributes redirectAttributes,
 				@ModelAttribute("candidate") Candidate candidate) {
 			LOGGER.debug("save method entered:::");
-			employment.setIsActive('Y');
-			employment.setCreatedDate(LocalDateTime.now());
+			//employment.setIsActive('Y');
+			//employment.setCreatedDate(LocalDateTime.now());
 			employment.setTool(employment.getTool().toUpperCase());
 			LOGGER.debug("date created");
 			employmentService.addEmployment(employment);

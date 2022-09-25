@@ -61,7 +61,7 @@ public class InterviewPanel {
 	@Column(name = "Technology")
 	private String technology;
 
-	private String isActive;
+	private String isActive = "Y";
 
 	private int createdby;
 
@@ -85,7 +85,7 @@ public class InterviewPanel {
 	private String captcha;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy'T'HH:mm")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	private int updatedby;
 	

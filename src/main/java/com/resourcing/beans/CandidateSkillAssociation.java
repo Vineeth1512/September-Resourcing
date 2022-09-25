@@ -43,13 +43,13 @@ public class CandidateSkillAssociation {
 	private String skillName;
 
 	@Column(name = "isActive")
-	private char isActive;
+	private char isActive = 'Y';
 
 	@Column(name = "createdby")
 	private int createdby;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy'T'HH:mm")
-	private LocalDateTime createdDate; // DEFAULT now(),
+	private LocalDateTime createdDate =LocalDateTime.now(); // DEFAULT now(),
 
 	@Column(name = "updatedby")
 	private int updatedby; // character varying(45),

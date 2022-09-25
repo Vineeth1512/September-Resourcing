@@ -48,7 +48,7 @@ public class AdminUser {
 	private String userCaptcha;
 
 	@Column(name = "isActive")
-	private String isActive;
+	private String isActive = "Y";
 
 	@Column(name = "createdBy", nullable = false)
 	private int createdBy;

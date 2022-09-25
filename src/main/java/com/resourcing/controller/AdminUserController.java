@@ -147,8 +147,8 @@ public class AdminUserController {
 			ModelAndView mav = new ModelAndView("admin_user_register_form.html");
 			return mav;
 		} else {
-			objSaveAdmin.setCreatedDate(LocalDateTime.now());
-			objSaveAdmin.setIsActive("Y");
+			//objSaveAdmin.setCreatedDate(LocalDateTime.now());
+			//objSaveAdmin.setIsActive("Y");
 			adminUserService.addAdminUser(objSaveAdmin);
 			objSaveAdmin.setCreatedBy(objSaveAdmin.getAdminId());
 			adminUserService.updateAdminUser(objSaveAdmin);
@@ -302,8 +302,8 @@ public class AdminUserController {
 		LOGGER.debug("abobe if condition::::::::");
 		if (companyService.findByCompanyName(objCompany.getCompanyName()) == null) {
 			LOGGER.debug("if condition:::::::");
-			objCompany.setIsActive("Y");
-			objCompany.setCreatedDate(LocalDateTime.now());
+			//objCompany.setIsActive("Y");
+			//objCompany.setCreatedDate(LocalDateTime.now());
 			companyService.saveCompany(objCompany);
 			List<Company> companyObj = companyService.getAllCompanyies();
 			model.addAttribute("listCompany", companyObj);
@@ -393,8 +393,8 @@ public class AdminUserController {
 			LOGGER.debug("before Save::" + company.getCompanyId());
 			LOGGER.debug("before Save::" + company.getCompanyId());
 			LOGGER.debug("before Save::" + objCompany.getCompanyName());
-			branch.setIsActive("Y");
-			branch.setCreatedDate(LocalDateTime.now());
+			//branch.setIsActive("Y");
+			//branch.setCreatedDate(LocalDateTime.now());
 			branch.setCompany(objCompany);
 			branch.getBranchId();
 			branchService.addBranch(branch);

@@ -61,13 +61,13 @@ public class Client {
 	private String password;
 
 	@Column(name = "isActive")
-	private String isActive;
+	private String isActive = "Y";
 
 	@Column(name = "createdby")
 	private int createdby;
 
 	@Column(name = "createdDate")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@Column(name = "updatedby")
 	private int updatedby; 

@@ -1,6 +1,6 @@
 /**
   *	
-  *@author:Praveen Gudimalla
+   *@author:Praveen Gudimalla
   *
   *
   **/
@@ -61,13 +61,13 @@ public class Employment {
 	private float yearOfExperience;
 
 	@Column(name = "isActive")
-	private Character isActive;
+	private Character isActive = 'Y';
 
 	@Column(name = "createdBy")
 	private String createdBy;
 
 	@Column(name = "createdDate")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@Column(name = "updatedBy")
 	private String updatedBy;

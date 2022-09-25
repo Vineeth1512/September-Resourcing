@@ -64,8 +64,8 @@ public class EducationController {
 	public String saveEducation(@ModelAttribute("education") Education education, RedirectAttributes redirectAttributes,
 			Model model, @ModelAttribute("candidate") Candidate candidate) {
 		LOGGER.debug("educationform" + education.getCourse());
-		education.setIsActive('Y');
-		education.setCreatedDate(LocalDateTime.now());
+		//education.setIsActive('Y');
+		//education.setCreatedDate(LocalDateTime.now());
 		education.setCourse(education.getCourse().toUpperCase());
 		educationService.addEducation(education);
 		redirectAttributes.addFlashAttribute("message", "   One education record is added!!");
