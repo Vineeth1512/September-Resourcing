@@ -112,8 +112,8 @@ public class CandidateController {
 			LOGGER.debug("created_by:::" + candidate.getCandidateId());
 			// after adding the account we get the candidateId that's why we are updating
 			// the created by here..
-			candidate.setCreatedBy(candidate.getCandidateId());
-			candidate.setIsActive('Y');
+			//candidate.setCreatedBy(candidate.getCandidateId());
+			//candidate.setIsActive('Y');
 			candidateService.updateCandidate(candidate);
 			LOGGER.debug("name of the first:::" + candidate.getFirstName());
 			redirectAttributes.addFlashAttribute("message", "registered successfully!!");

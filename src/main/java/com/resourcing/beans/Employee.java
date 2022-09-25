@@ -76,11 +76,11 @@ public class Employee {
 	private long mobileNo;
 
 
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 	
 	private LocalDateTime updatedDate;
 	
-	private String isActive;
+	private String isActive = "Y";
 	
 	private int createdBy;
 	

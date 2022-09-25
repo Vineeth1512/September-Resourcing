@@ -104,8 +104,6 @@ public class InterviewPanelController {
 			return mvc;
 		} else {
 
-			interviewer.setIsActive("yes");
-			interviewer.setCreatedDate(LocalDateTime.now());
 			interviewerService.addInterviewer(interviewer);
 
 			interviewer.setCreatedby(interviewer.getInterviewerId());

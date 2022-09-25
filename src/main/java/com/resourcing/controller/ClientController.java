@@ -209,12 +209,12 @@ public class ClientController {
 			HttpSession session) throws IOException {
 		Client tclient = clientService.getClientById(uiClient.getClientId());
 		LOGGER.debug("inside updateClient after update id is:::" + uiClient.getClientId());
-		uiClient.setIsActive("Y");
+		//uiClient.setIsActive("Y");
 		//uiClient.setBranch(tclient.getBranch());
 		uiClient.setUpdatedby(clientId);
 		uiClient.setUser(tclient.getUser());
 		uiClient.setUpdatedDate(LocalDateTime.now());
-		uiClient.setCreatedDate(tclient.getCreatedDate());
+		//uiClient.setCreatedDate(tclient.getCreatedDate());
 		uiClient.setCompanyProfile(tclient.getCompanyProfile());
 		uiClient.setClientCompany(tclient.getClientCompany());
 		if (file.getOriginalFilename() == "") {

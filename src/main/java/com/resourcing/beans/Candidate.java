@@ -84,13 +84,13 @@ public class Candidate {
 	private String address;
 
 	@Column(name = "is_active")
-	private Character isActive;
+	private Character isActive = 'Y';
 
 	@Column(name = "created_by")
 	private int createdBy;
 
 	@Column(name = "created_date")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "dateOfBirth")

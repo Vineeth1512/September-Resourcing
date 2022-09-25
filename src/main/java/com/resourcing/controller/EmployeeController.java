@@ -389,12 +389,11 @@ public class EmployeeController {
 			employee.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
 			employeeExist.setImage(employee.getImage());
 		}
-//		System.out.println("branch:::" + employeeExist.getBranch().branchName);
 		System.out.println("in update method employee:: name " + employeeExist.getEmployeeName());
 		employeeExist.setUpdatedDate(LocalDateTime.now());
 		employeeExist.setUpdatedBy(employeeExist.getEmployeeId());
-		employeeExist.setCreatedDate(employeeExist.getCreatedDate());
-		employeeExist.setIsActive("Y");
+		//employeeExist.setCreatedDate(employeeExist.getCreatedDate());
+		//employeeExist.setIsActive("Y");
 		employeeExist.setEmployeeName(employee.getEmployeeName());
 		employeeExist.setMobileNo(employee.getMobileNo());
 		employeeExist.setBarCode(employeeExist.getBarCode());

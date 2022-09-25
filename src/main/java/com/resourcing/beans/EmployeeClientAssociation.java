@@ -46,7 +46,7 @@ public class EmployeeClientAssociation {
 	private Employee employee;
 
 	@Column(name = "isActive")
-	private char isActive;
+	private char isActive = 'Y';
 	
 	@Column(name = "createdby")
 	private int createdby;
@@ -54,7 +54,7 @@ public class EmployeeClientAssociation {
 	@Column(name = "createdDate")
 	// @Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd-MM-yyyy'T'HH:mm")
-	private LocalDateTime createdDate; // DEFAULT now(),
+	private LocalDateTime createdDate = LocalDateTime.now(); // DEFAULT now(),
 
 	@Column(name = "updatedby")
 	private int updatedby; // character varying(45),

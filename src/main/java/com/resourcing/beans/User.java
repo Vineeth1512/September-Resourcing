@@ -63,7 +63,7 @@ public class User {
 	private long mobileNumber;
 
 	@Column(name = "isActive")
-	private String isActive;
+	private String isActive = "Y";
 
 	@Column(name = "profilePhotolink")
 	private String profilePhotolink;
@@ -72,7 +72,7 @@ public class User {
 	private int createdBy;
 
 	@Column(name = "createdDate")
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate =LocalDateTime.now();
 
 	@Column(name = "updatedBy")
 	private int updatedBy;

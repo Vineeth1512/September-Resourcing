@@ -748,8 +748,8 @@ public class UserController {
 			LOGGER.debug("employee::branchName::" + branch.getBranchName());
 			int userId = (int) session.getAttribute("userId");
 			newEmployee.setBranch(branch);
-			newEmployee.setIsActive("Y");
-			newEmployee.setCreatedDate(LocalDateTime.now());
+			//newEmployee.setIsActive("Y");
+			//+newEmployee.setCreatedDate(LocalDateTime.now());
 			newEmployee.setUpdatedBy(userId);
 			newEmployee.setUpdatedDate(LocalDateTime.now());
 			newEmployee.setCreatedBy(userId);

@@ -46,12 +46,12 @@ public class Company {
 	@Column(name = "year_Of_Established")
 	private int yearOfEstablished;
 
-	private String isActive;
+	private String isActive = "Y";
 
 	@Column(name = "createdBy")
 	private int createdBy;
 
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate = LocalDateTime.now();
 
 	@Column(name = "updatedBy")
 	private int updatedBy;

@@ -68,8 +68,8 @@ public class CanSkillAssController {
 		csa.setSkillName(skill.getSkillName());
 		csa.setCandidateId(objCandidate.getCandidateId());
 		LOGGER.debug("csa" + csa.getCandidateId());
-		csa.setIsActive('Y');
-		csa.setCreatedby(objCandidate.getCandidateId());
+		//csa.setIsActive('Y');
+		//csa.setCreatedby(objCandidate.getCandidateId());
 		csa.setCandidateName(objCandidate.getFirstName());
 		csa.setCreatedDate(LocalDateTime.now());
 		if (canSkillAssociationService.findBySkillIdAndCanId(candidateId, csa.getSkillId()) == null) {
