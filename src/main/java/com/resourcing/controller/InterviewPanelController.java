@@ -118,7 +118,7 @@ public class InterviewPanelController {
 		}
 	}
 
-	@GetMapping("/login")
+	@GetMapping("/inter/login")
 	public ModelAndView getloginPage() {
 		LOGGER.info("entered into user/controller:::: login method");
 		ModelAndView mav = new ModelAndView("interviewerlogin");
