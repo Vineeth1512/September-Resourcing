@@ -225,61 +225,115 @@
 
 					<!-- Dashboard Headline -->
 					<div class="dashboard-headline">
-						<div></div>
-						<h2 align="center">Candidate List</h2>
-						<h2></h2>
-						<br>
-						<table class="basic-table" id="example">
-							<thead>
-								<tr>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Email</th>
-									<th>Mobile Number</th>
-									<th>IsActive</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="candidateObj : ${candidateList}">
-									<td th:text="${candidateObj.firstName}"></td>
-									
-									<td th:text="${candidateObj.lastName}"></td>
-									
-									<td th:text="${candidateObj.email}"></td>
-																											<td th:text="${candidateObj.mobileNumber}"></td>
-									
-<td><input type="button" id="myButton"
-									th:value="*{candidateObj.isActive}" onclick="Buttontoggle();"></td>
-								
+						<div class="row">
+						
 
-									<!-- <td><select name="educationList">
-											<option value="text">Courses</option>
-											<option
-												th:if="${candidateObj.candidateId==educationObj.candidate.candidateId}"
-												th:each="educationObj : ${educationList}"
-												th:text="${educationObj.course}"></option>
-									</select></td> -->
+							<!-- Dashboard Box -->
+							<div class="col-xl-12">
+								<div id="print">
+									<div class="dashboard-box margin-top-0">
 
-									<!-- <td><ul class="pm">
-											<li><a href="#" title="#">Select</a>
-												<ul class="cm">
-													<li><a
-														th:href="@{/emp/candidate/educationList/{candidateId}(candidateId=${candidateObj.candidateId})}">Education</a></li>
-													<li><a
-														th:href="@{/emp/candidate/employmentList/{candidateId}(candidateId=${candidateObj.candidateId})}">Employment</a></li>
-												</ul></li>
-										</ul></td> -->
-									
+										<!-- Headline -->
+										<div class="headline">
+											<h3>
+												<i class="icon-material-outline-business-center"></i><span
+													style="color: blue" th:text="${TableName}"></span> <b>
+
+													<span style="color: green" th:text="${message}"></span> <span
+													style="color: red" th:text="${red}"></span>
+												</b>
+
+											</h3>
+										</div>
+
+										<!--=========== for search bar -->
+										<input id="searchbar" onkeyup="search_data()" type="text"
+											name="search" placeholder="Search here">
+										<!--============ for search bar -->
+
+										<div class="content" th:each="obj:${candidateList}">
+											<ul class="dashboard-box-list" id="list">
+												<li class="data">
+													<!-- Job Listing -->
+													<div class="job-listing">
+
+														<!-- Job Listing Details -->
+														<div class="job-listing-details">
+
+															<!-- Details -->
+															<div class="job-listing-description">
+
+																<i class="icon-line-awesome-institution"></i> First
+																Name :
+																<h3 th:text="${obj.firstName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+
+																<i class="icon-line-awesome-institution"></i> Last Name
+																 :
+																<h3 th:text="${obj.lastName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3>
+<!-- 
+																<i class="icon-line-awesome-institution"></i> Company
+																Name :
+																<h3 th:text="${obj.branch.company.companyName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3> 
+																	
+																	<i class="icon-line-awesome-institution"></i> Branch
+																Name :
+																<h3 th:text="${obj.branch.branchName}"
+																	class="dashboard-status-button green"
+																	style="display: inline-block;"></h3> -->
+
+
+																<i class="icon-material-baseline-mail-outline"></i>
+																Email : <span class="dashboard-status-button green"
+																	th:text="${obj.email}" style="color: rgb();"></span>
+
+
+																<!-- Job Listing Footer -->
+																<div class="job-listing-footer">
+																	<ul>
+																		<li><i class="icon-feather-phone"></i> Mobile
+																			Number : <span class="dashboard-status-button green"
+																			th:text="${obj.mobileNumber}" style="color: rgb();"></span></li>
 
 
 
-								</tr>
+																		<li><i class="icon-material-outline-date-range"></i>
+																			IsActive : <span class="dashboard-status-button green"
+																			th:text="${obj.isActive}" style="color: rgb();"></span></li>
 
-							</tbody>
-						</table>
+
+																	</ul>
+																	
+																</div>
+															</div>
+														</div>
+													</div> <!--  Buttons -->
 
 
-					</div>
+												</li>
+
+
+											</ul>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="margin-top-70"></div>
+								<!-- Spacer / End-->
+
+								<button class="button ripple-effect"
+									onclick="printContent('print')">Download</button>
+
+
+							</div>
+
+						</div>
 
 
 
@@ -379,6 +433,10 @@
 	<script src="../../js/magnific-popup.min.js"></script>
 	<script src="../../js/slick.min.js"></script>
 	<script src="../../js/custom.js"></script>
+	
+	
+			<script src="../../js/print.js"></script>
+			<script src="../../js/search_bar.js"></script>
 
 	<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 	<script>
