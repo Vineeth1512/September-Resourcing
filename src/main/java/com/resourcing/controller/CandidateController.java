@@ -30,6 +30,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -49,6 +51,7 @@ import com.resourcing.beans.CandidateJdAssociation;
 import com.resourcing.beans.Doc;
 import com.resourcing.beans.JobDescription;
 import com.resourcing.beans.Schedule;
+import com.resourcing.oath.CustomOAuth2User;
 import com.resourcing.repository.CandidateRepository;
 import com.resourcing.service.CandidateJdAssociationService;
 import com.resourcing.service.CandidateService;
@@ -66,8 +69,8 @@ public class CandidateController {
 
 	static Logger LOGGER = Logger.getLogger(CandidateController.class);
 	
-	private static final int WIDTH = 500;
-    private static final int HEIGHT = 500;
+//		private static final int WIDTH = 500;
+//      private static final int HEIGHT = 500;
 
 	@Autowired
 	CandidateService candidateService;
@@ -569,8 +572,50 @@ public class CandidateController {
 	
 	//==================	Dashboard  Closed		=================================//
 	
+	//OAUTH LOGIN WITH GOOGLE
 	
-	
+	@GetMapping("/oath")
+	public String oathGoogleLogin(HttpServletRequest request,Model model,Authentication authentication) {
+		System.out.println("method invoked:::");
+		//CustomOAuth2User oauthUser = (CustomOAuth2User) authentication.getPrincipal(); //this is for checking 
+		DefaultOidcUser oauthUser = (DefaultOidcUser) authentication.getPrincipal();
+		String email = oauthUser.getAttribute("email");
+		System.out.println("controller: oath: "+ oauthUser.getEmail());
+		Candidate objCandidate = candidateService.findByEmail(email);
+		if(objCandidate== null) {
+			model.addAttribute(email, objCandidate);
+			return "";
+		}
+		else {
+		HttpSession session = request.getSession();
+		LOGGER.debug("session created:::::");
+		session.setAttribute("candidateObj", objCandidate);
+		LOGGER.debug("session created:::::::::::::::::::::::::::::::::");
+		LOGGER.debug("session working:::::");
+		LOGGER.debug("objschedule::::::");
+		List<CandidateJdAssociation> list = candidateJdAssociationService.getAllCandidateJdAssociations();
+		List<CandidateJdAssociation> candidateJobList = list.stream().filter(obj -> obj.getCandidate().getCandidateId()== objCandidate.getCandidateId()).collect(Collectors.toList());
+		List<CandidateJdAssociation> selected = candidateJobList.stream().filter(obj ->obj.getStatus().equals("SELECTED")).collect(Collectors.toList());
+		List<CandidateJdAssociation> rejected = candidateJobList.stream().filter(obj ->obj.getStatus().equals("REJECTED")).collect(Collectors.toList());
+		List<CandidateJdAssociation> pending = candidateJobList.stream().filter(obj ->obj.getStatus().equals("SCHEDULED")).collect(Collectors.toList());
+		List<CandidateJdAssociation> scheduleJobs = candidateJobList.stream().filter(obj -> obj.getStatus().equals("SCHEDULED")).collect(Collectors.toList());
+		List<CandidateJdAssociation> notScheduleJobs = candidateJobList.stream().filter(obj -> obj.getStatus().equals("NOT SCHEDULED")).collect(Collectors.toList());
+		List<Schedule> allSchedules = scheduleService.getAllSchedules();
+		List<Schedule> mySchedules = allSchedules.stream().filter(obj -> obj.getCandidate().getCandidateId()==objCandidate.getCandidateId()).collect(Collectors.toList());
+		List<Schedule> todaySchedule= mySchedules.stream().filter(today ->today.getDate().isEqual(LocalDate.now())).collect(Collectors.toList());
+		List<Schedule> upcomingSchedule= mySchedules.stream().filter(upcoming -> upcoming.getDate().isAfter(LocalDate.now())).collect(Collectors.toList());
+		model.addAttribute("todaySchedule", todaySchedule.size());
+		model.addAttribute("upcomingSchedule", upcomingSchedule.size());
+		model.addAttribute("selectedJobs", selected.size());
+		model.addAttribute("pendingJobs", pending.size());
+		model.addAttribute("rejectedJobs", rejected.size());
+		model.addAttribute("appliedJobs", candidateJobList.size());
+		model.addAttribute("notScheduledJobs", notScheduleJobs.size());
+		model.addAttribute("scheduledJobs", scheduleJobs.size());
+		model.addAttribute("candidate", objCandidate);
+		return "candidate_dashboard";
+		}
+	}
 	
 	
 }

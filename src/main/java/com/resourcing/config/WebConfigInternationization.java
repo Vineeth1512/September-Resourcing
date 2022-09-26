@@ -13,7 +13,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfigInternationization implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
