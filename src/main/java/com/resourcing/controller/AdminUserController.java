@@ -83,6 +83,7 @@ public class AdminUserController {
 		model.addAttribute("candidateList", candidateList.size());
 		model.addAttribute("clientList", clientList.size());
 		model.addAttribute("objJd", jobDescription);
+		LOGGER.debug("condition:::::");
 		return "homepage";
 	}
 
