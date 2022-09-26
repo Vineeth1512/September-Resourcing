@@ -69,8 +69,6 @@ public class CandidateController {
 
 	static Logger LOGGER = Logger.getLogger(CandidateController.class);
 	
-//		private static final int WIDTH = 500;
-//      private static final int HEIGHT = 500;
 
 	@Autowired
 	CandidateService candidateService;
@@ -130,7 +128,7 @@ public class CandidateController {
 
 	// candidate form will appear to enter his/her details
 	@GetMapping("")
-	public String newCandidate(Model model, HttpServletRequest request, Candidate candidate,
+	public String newCandidate(Model model, HttpServletRequest request,Candidate candidate,
 			@RequestParam(required = false) String message,
 			final HttpServletResponse response, HttpSession session) {
 		LOGGER.debug("add candidate::::");
@@ -138,6 +136,7 @@ public class CandidateController {
 		HttpSession sessionOne = request.getSession();
 		sessionOne.setAttribute("url", url1);
 		LOGGER.debug("url1::::::" + url1);
+		//object having mail
 		model.addAttribute("candidate", candidate);
 		//message for email already exist!!
 		if(!StringUtils.isEmpty(message)) {
@@ -575,7 +574,9 @@ public class CandidateController {
 	//OAUTH LOGIN WITH GOOGLE
 	
 	@GetMapping("/oath")
-	public String oathGoogleLogin(HttpServletRequest request,Model model,Authentication authentication) {
+	public String oathGoogleLogin(HttpServletRequest request,Candidate candidate,
+			RedirectAttributes redirectAttributes,
+			Model model,Authentication authentication) {
 		System.out.println("method invoked:::");
 		//CustomOAuth2User oauthUser = (CustomOAuth2User) authentication.getPrincipal(); //this is for checking 
 		DefaultOidcUser oauthUser = (DefaultOidcUser) authentication.getPrincipal();
@@ -583,8 +584,9 @@ public class CandidateController {
 		System.out.println("controller: oath: "+ oauthUser.getEmail());
 		Candidate objCandidate = candidateService.findByEmail(email);
 		if(objCandidate== null) {
-			model.addAttribute(email, objCandidate);
-			return "";
+			redirectAttributes.addFlashAttribute("message", "You are not register as candidate!! pls register before login!!");
+			redirectAttributes.addAttribute("candidate",objCandidate);
+			return "redirect:/candidate";
 		}
 		else {
 		HttpSession session = request.getSession();

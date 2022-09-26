@@ -120,14 +120,14 @@ public class InterviewPanelController {
 		}
 	}
 
-	@GetMapping("/login")
-	public ModelAndView getloginPage() {
-		LOGGER.info("entered into user/controller:::: login method");
-		ModelAndView mav = new ModelAndView("interviewerlogin");
-		InterviewPanel newInterviewer = new InterviewPanel();
-		mav.addObject("InterviewerDetails", newInterviewer);
-		return mav;
-	}
+//	@GetMapping("/login")
+//	public ModelAndView getloginPage() {
+//		LOGGER.info("entered into user/controller:::: login method");
+//		ModelAndView mav = new ModelAndView("interviewerlogin");
+//		InterviewPanel newInterviewer = new InterviewPanel();
+//		mav.addObject("InterviewerDetails", newInterviewer);
+//		return mav;
+//	}
 
 	@PostMapping("/validateInterviewer")
 	public ModelAndView validateUsermethod(InterviewPanel tinterviewer, ModelAndView mav, HttpServletRequest request,
